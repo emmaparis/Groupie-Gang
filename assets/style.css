@@ -1,0 +1,30 @@
+.search-container {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+.search-container input {
+margin-right: 10px;
+}
+
+.card-container {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 20px;
+justify-items: center;
+margin: 0 auto;
+max-width: 900px;
+}
+
+
+.card {
+background-color: #f1f1f1;
+padding: 20px;
+text-align: center;
+border-radius: 5px;
+border: 1px solid black;
+padding: 10px;
+margin-bottom: 10px;
+}
