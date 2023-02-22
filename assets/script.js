@@ -36,3 +36,16 @@
       search();
     }
   });
+
+  //rapidAPI concert tracker (artist search)
+  const options = {
+    method: 'GET',
+    headers: { //define options for fetch below
+      'X-RapidAPI-Key': '3fdcf50bafmsh314ad737bf310e6p17a2f8jsnc654ee3d4629',
+      'X-RapidAPI-Host': 'concerts-artists-events-tracker.p.rapidapi.com'
+    }
+  };
+  fetch('https://concerts-artists-events-tracker.p.rapidapi.com/artist?name=%20joji&page=1', options)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
