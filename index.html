@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Groupie Gang</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link
+    rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="assets/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.js"></script>
@@ -21,8 +23,9 @@
         
     </div>
     <br/>
-
-    <div class="columns">
+    <!-- slider main container -->
+    <div class="swiper">
+    <div class="columns swiper-wrapper">
         <div class="card column is-6 is-offset-3 is-8-mobile is-offset-2-mobile">
             <div class="card-image">
               <figure class="image is-4by3 is-960by720">
@@ -51,11 +54,19 @@
               </div>
             </div>
         </div>
+          <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
 
+  <!-- If we need navigation buttons -->
+   <div class="swiper-button-prev"></div>
+   <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+   <div class="swiper-scrollbar"></div>
     </div>
-
+    </div>
     
-    <div class="card">
+    <!-- <div class="card">
       <div class="card-image">
        <figure class="image is-4by3">
         <img src="https://versions.bulma.io/0.7.0/images/placeholders/1280x960.png" id="map" alt="Placeholder image">
@@ -74,13 +85,34 @@
       </div>
     </div>
     </div>
-    </div>
+    </div> -->
+
+
+<!-- Slider secondary container -->
+<!-- <div class="swiper"> -->
+  <!-- Additional required wrapper -->
+  <!-- <div class="swiper-wrapper"> -->
+    <!-- Slides -->
+    <!-- <div class="swiper-slide">Slide 1</div>
+    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">Slide 3</div>
+    ... -->
+  <!-- </div> -->
+  <!-- If we need pagination -->
+  <!-- <div class="swiper-pagination"></div> -->
+
+  <!-- If we need navigation buttons -->
+  <!-- <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div> -->
+
+  <!-- If we need scrollbar -->
+  <!-- <div class="swiper-scrollbar"></div>
+</div> -->
 
 
 
 
-
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="assets/script.js"></script>
     
     
