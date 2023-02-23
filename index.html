@@ -14,42 +14,56 @@
 </head>
 <body>
   <header class="columns">
-    <canvas class="column is-full" id="canvas-image-blending"></canvas> <!--granim gradient element-->
+    <!-- <canvas class="column is-12-mobile" id="canvas-image-blending"></canvas> granim gradient element -->
+    <figure class="image column is-12">
+      <!-- img for map -->
+      <img class="" id="map-img" src="./assets/groupiehero_720.remini-enhanced.jpg" alt="Placeholder image">
+    </figure>
+  </header>
 
     <div class="search-container column is-4 is-offset-4"> <!--search container w/ input and button-->
         <label for="search-input" ></label>
         <input type="text" class="input is-primary " id="search-input" placeholder="Find the Goods">
         <button id="search-button" class="button is-primary">Let's GO!</button>
     </div>  
-  </header>  
+    
     <div id="results-container">
         
     </div>
     <br/>
 
     <div class="columns">
+       
         <div class="card column is-6 is-offset-3 is-8-mobile is-offset-2-mobile">
             <div class="card-image">
-              <figure class="image is-2by2">
-                <!-- img for map -->
-                <img class="" id="map-img" src="https://versions.bulma.io/0.7.0/images/placeholders/1280x960.png" alt="Placeholder image">
-              </figure>
+              <div class="media-content">
+        <p class="title is-4">John Smith</p>
+        <p class="subtitle is-6">@johnsmith</p>
+      </div>
             </div>
             <div class="card-content">
               <div class="media">
                 <div class="media-left">
-                  <figure class="image is-128x128">
-                    <!-- band photo goes here -->
-                    <img id="band-img"src="https://versions.bulma.io/0.7.0/images/placeholders/96x96.png" alt="Placeholder image">
-                  </figure>
+                  
                 </div>
                 <div class="media-content media-right">
                   <p id="band-name"class="title is-4">John Smith</p> <!--band name-->
                   <p id="concert-date"class="title is-4">John Smith</p> <!--concert date-->
                   <p id="venue"class="title is-4">John Smith</p> <!-- venue name -->
                   <p id="address"class="title is-4">John Smith</p> <!--city, country-->
+                
                 </div>
+                <figure class="image is-128x128">
+                    <!-- band photo goes here -->
+                    <img id="band-img"src="https://versions.bulma.io/0.7.0/images/placeholders/96x96.png" alt="Placeholder image">
+                  </figure>
+                
               </div>
+              <figure class="image is-2by2">
+                <!-- img for map -->
+                <img class="" id="map-img" src="https://versions.bulma.io/0.7.0/images/placeholders/1280x960.png" alt="Placeholder image">
+              </figure>
+            </div>
           
               <div class="content">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -59,7 +73,6 @@
                 <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
               </div>
             </div>
-        </div>
 
     </div>
 
