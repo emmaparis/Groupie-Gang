@@ -60,3 +60,46 @@ function getShows(artistName) { //when function called, will be passed the artis
     
 };
 
+// var granimInstance = new Granim({
+//   element: '#canvas-image-blending',
+//   direction: 'top-bottom',
+//   isPausedWhenNotInView: true,
+//   image : {
+//       source: 'assets/groupiehero_720.png',
+//       blendingMode: 'multiply',
+//       stretchMode: ['stretch-if-bigger','none']
+//   },
+//   states : {
+//       "default-state": {
+//           gradients: [
+//               ['#29323c', '#485563'],
+//               ['#FF6B6B', '#556270'],
+//               ['#80d3fe', '#7ea0c4'],
+//               ['#f0ab51', '#eceba3']
+//           ],
+//           transitionSpeed: 7000
+//       }
+//   }
+// });
+
+const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+    
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    });
