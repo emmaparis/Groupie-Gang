@@ -15,7 +15,7 @@ $(searcher).on('click', function() {
   const options = {
     method: 'GET',
     headers: { //define options for fetch below
-      'X-RapidAPI-Key': '3fdcf50bafmsh314ad737bf310e6p17a2f8jsnc654ee3d4629', // needs to be put back in
+      'X-RapidAPI-Key': '3fdcf50bafmsh314ad737bf310e6p17a2f8jsnc654ee3d4629', 
       'X-RapidAPI-Host': 'concerts-artists-events-tracker.p.rapidapi.com'
     }
   };
