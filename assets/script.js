@@ -15,7 +15,7 @@ $(searcher).on('click', function() {
   const options = {
     method: 'GET',
     headers: { //define options for fetch below
-      // 'X-RapidAPI-Key': '', // needs to be put back in
+      // 'X-RapidAPI-Key': '', 
       'X-RapidAPI-Host': 'concerts-artists-events-tracker.p.rapidapi.com'
     }
   };
@@ -36,11 +36,11 @@ function getShows(artistName) { //when function called, will be passed the artis
       let lat = data.data[i].location.geo.latitude;
       let lon = data.data[i].location.geo.longitude;
 //       //pull the date --> will go in 'date' section of card
-      console.log(data.data[i].startDate);
+      $('#concert-date').text(data.data[i].startDate);
 //       //get band name (could also just use user input result)
-      console.log(data.data[i].name);
+      $('#band-name').text(data.data[i].name);
 //       // get venue name
-      console.log(data.data[i].location.name);
+      $('#venue').text(data.data[i].location.name);
 //       //get band image (if available)
       let bandImage = document.getElementById("band-img");
       bandImage.setAttribute("src", data.data[i].image); //sets top img of card to whatever image was given from api for current artist/band
