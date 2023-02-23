@@ -5,17 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Groupie Gang</title>
+    <!-- bulma stylesheet before default stylesheet -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="assets/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <!-- granim gradient js library -->
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.js"></script>
 </head>
 <body>
-    <canvas id="canvas-image-blending"></canvas>
-    <div class="search-container column is-4 is-offset-4">
+    <canvas id="canvas-image-blending"></canvas> //granim gradient element
+
+    <div class="search-container column is-4 is-offset-4"> <!--search container w/ input and button-->
         <label for="search-input" ></label>
         <input type="text" class="input is-primary " id="search-input" placeholder="Enter search term">
-        <button id="search-button" class="button is-primary">Search</button>
+        <button id="search-button" class="button is-primary">Let's GO!</button>
     </div>    
     <div id="results-container">
         
@@ -26,6 +29,7 @@
         <div class="card column is-6 is-offset-3 is-8-mobile is-offset-2-mobile">
             <div class="card-image">
               <figure class="image is-2by2">
+                <!-- img for map -->
                 <img class="" id="map-img" src="https://versions.bulma.io/0.7.0/images/placeholders/1280x960.png" alt="Placeholder image">
               </figure>
             </div>
@@ -33,14 +37,15 @@
               <div class="media">
                 <div class="media-left">
                   <figure class="image is-128x128">
+                    <!-- band photo goes here -->
                     <img id="band-img"src="https://versions.bulma.io/0.7.0/images/placeholders/96x96.png" alt="Placeholder image">
                   </figure>
                 </div>
                 <div class="media-content media-right">
-                  <p id="band-name"class="title is-4">John Smith</p>
-                  <p id="concert-date"class="title is-4">John Smith</p>
-                  <p id="venue"class="title is-4">John Smith</p>
-                  <p id="address"class="title is-4">John Smith</p>
+                  <p id="band-name"class="title is-4">John Smith</p> <!--band name-->
+                  <p id="concert-date"class="title is-4">John Smith</p> <!--concert date-->
+                  <p id="venue"class="title is-4">John Smith</p> <!-- venue name -->
+                  <p id="address"class="title is-4">John Smith</p> <!--city, country-->
                 </div>
               </div>
           
