@@ -1,9 +1,10 @@
   // when page loads, if concerts have been saved, repopulate the "saved/favs" carousel from local storage
-  
-  // event listener/jQuery .on function to listen for button press when user has typed something in and clicked button --> will call function with rapid API fetch
+
+  //target search input and button
 var searchInput = $('#search-input');
 var searcher = $('#search-button');
 
+//when user types artist name and clicks button, calls function w/fetch, passing whatever was typed as the artist name
 $(searcher).on('click', function() {
       let artistName = searchInput.val();
       getShows(artistName);
@@ -47,8 +48,8 @@ function getShows(artistName) { //when function called, will be passed the artis
       let city = data.data[i].location.address.addressLocality;
 //       //grab country
       let country = data.data[i].location.address.addressCountry;
-      let address = document.getElementById("address");
-      $(address).text(city + ", "+ country)
+      let address = document.getElementById("address"); 
+      $(address).text(city + ", "+ country) //puts city&country into address text area
 
       let myMap = document.getElementById("map-img"); //this will eventually be the img a given card
 
@@ -57,11 +58,7 @@ function getShows(artistName) { //when function called, will be passed the artis
     })
     .catch(err => console.error(err));
     
-    // pull out venue name 
-    // pull out city name    
-    
 };
-
 
 var granimInstance = new Granim({
   element: '#canvas-image-blending',
@@ -69,7 +66,8 @@ var granimInstance = new Granim({
   isPausedWhenNotInView: true,
   image : {
       source: 'assets/groupiehero_720.png',
-      blendingMode: 'multiply'
+      blendingMode: 'multiply',
+      stretchMode: ['stretch-if-bigger','none']
   },
   states : {
       "default-state": {
