@@ -21,28 +21,31 @@ function getShows(artistName) { //when function called, will be passed the artis
       return response.json();
     })
     .then(function (data) {
-      let i = 0;
+      // do a loop (to 5?) to populate each card with a concert info
+      let i = 0; //just trying one "iteration" for now
       console.log(data.data.length);
-      console.log(data.data[i]);
+      console.log(data.data[i]); // see one response object
+      // pull the lon, lat --> these values will be put into the img src of the card to display a map based on those coords
       console.log(data.data[i].location.geo.latitude);
       console.log(data.data[i].location.geo.longitude);
+      //pull the date --> will go in 'date' section of card
       console.log(data.data[i].startDate);
+      //get band name (could also just use user input result)
       console.log(data.data[i].name);
+      // get venue name
       console.log(data.data[i].location.name);
+      //get band image (if available)
       console.log(data.data[i].image);
+      // grab city/region
+      console.log(data.data[i].location.address.addressLocality);
+      //grab country
+      console.log(data.data[i].location.address.addressCountry);
     })
     .catch(err => console.error(err));
-    // let i = 0;
-    // console.log(data[i].location.geo.latitude);
-    // console.log(data[i].location.geo.longitude);
-    // console.log(data[i].startDate);
-    // console.log(data[i].name);
-    // console.log(data[i].location.name);
-    // console.log(data[i].image);
-    // do a loop (to 5?) to populate each card with a concert info
-    // pull the lon, lat --> these values will be put into the img src of the card to display a map based on those coords
     
-    // pull the date --> goes in 'date' section of card
+    
+    
+    // 
     // pull out venue name 
     // pull out city name
     // artist image (if included) --> can have placeholder image already in card then be replaced by this img as the src
