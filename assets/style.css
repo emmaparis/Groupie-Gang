@@ -8,4 +8,7 @@
     bottom: 0;
     left: 0;
 }
+#search-input {
+    width: 300px;
+}
 
