@@ -12,13 +12,46 @@
 </head>
 <body>
     <canvas id="canvas-image-blending"></canvas>
-    <div class="search-container">
-        <label for="search-input">Search:</label>
-        <input type="text" id="search-input" placeholder="Enter search term">
+    <div class="search-container column is-4 is-offset-4">
+        <label for="search-input" ></label>
+        <input type="text" class="input is-primary " id="search-input" placeholder="Enter search term">
         <button id="search-button" class="button is-primary">Search</button>
     </div>    
     <div id="results-container">
-        <img src="" id="map-img"/> <!--just a placeholder for displaying the image. -->
+        
+    </div>
+    <br/>
+
+    <div class="columns">
+        <div class="card column is-6 is-offset-3 is-8-mobile is-offset-2-mobile">
+            <div class="card-image">
+              <figure class="image is-2by2">
+                <img class="" id="band-img" src="https://versions.bulma.io/0.7.0/images/placeholders/1280x960.png" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-128x128">
+                    <img id="map-img"src="https://versions.bulma.io/0.7.0/images/placeholders/96x96.png" alt="Placeholder image">
+                  </figure>
+                </div>
+                <div class="media-content media-right">
+                  <p class="band-name title is-4">John Smith</p>
+                  <p class="subtitle is-6">@johnsmith</p>
+                </div>
+              </div>
+          
+              <div class="content">
+                <canvas id="granim-canvas"></canvas>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                <a href="#">#css</a> <a href="#">#responsive</a>
+                <br>
+                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+              </div>
+            </div>
+        </div>
 
     </div>
     <div class="card">
@@ -54,9 +87,30 @@
 
 
 
-
+    <script src="node_modules/granim/dist/granim.min.js"></script>
     <script src="assets/script.js"></script>
-    
+    <script>
+var granimInstance = new Granim({
+    element: '#canvas-image-blending',
+    direction: 'top-bottom',
+    isPausedWhenNotInView: true,
+    image : {
+        source: './assets/1677169700.jpg',
+        blendingMode: 'multiply'
+    },
+    states : {
+        "default-state": {
+            gradients: [
+                ['#29323c', '#485563'],
+                ['#FF6B6B', '#556270'],
+                ['#80d3fe', '#7ea0c4'],
+                ['#f0ab51', '#eceba3']
+            ],
+            transitionSpeed: 7000
+        }
+    }
+});
+</script>
     
 </body>
 </html>

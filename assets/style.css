@@ -8,4 +8,11 @@
     bottom: 0;
     left: 0;
 }
+#search-input {
+    width: 300px;
+}
+#map {
+    width: 300px;
+    height: 300px;
+}
 

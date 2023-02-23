@@ -29,12 +29,12 @@ N/A
 N/A
 # Credits   
   - [![forthebadge](https://forthebadge.com/images/badges/uses-badges.svg)](https://forthebadge.com) 
-  - Flaticon: https://www.flaticon.com/free-icons/concert
-    - RapidAPI 
-    - Mapbox Static images API
-    - Bulma CSS
-    - Unsplash
-    
+  - Flaticon
+  - RapidAPI 
+  - Mapbox Static images API
+  - Bulma CSS
+  - Unsplash
+
 # License
 Please see the repo for license info
 
