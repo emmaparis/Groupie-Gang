@@ -33,6 +33,8 @@ N/A
     - RapidAPI 
     - Mapbox Static images API
     - Bulma CSS
+    - Unsplash
+    
 # License
 Please see the repo for license info
 
