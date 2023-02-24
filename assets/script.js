@@ -29,8 +29,10 @@ function getShows(artistName) { //when function called, will be passed the artis
     })
     .then(function (data) {
 //       // do a loop (to 5?) to populate each card with a concert info
-      let i = 0; //just trying one "iteration" for now
+      
+      for(i= 0; i<5; i++) {
       console.log(data);
+      console.log(i);
       console.log(data.data[i]); // see one response object
 //       // pull the lon, lat --> these values will be put into the map-img src of the card to display a map based on those coords
       let lat = data.data[i].location.geo.latitude;
@@ -59,7 +61,7 @@ function getShows(artistName) { //when function called, will be passed the artis
       let myMap = document.getElementById(`map-image-${i}`); //this will eventually be the img a given card
 
       myMap.setAttribute("src", `https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/url-https%3A%2F%2Fdocs.mapbox.com%2Fapi%2Fimg%2Fcustom-marker.png(${lon},${lat})/${lon},${lat},11/300x300?access_token=pk.eyJ1IjoiamRyODg4OCIsImEiOiJjbGVmdTg1bXowYmxmM3ludjJscjNlcWk5In0.T8Nn1lRMy558npSqRLS71w`);
-
+      } //ends loop
     })
     .catch(err => console.error(err));
     
