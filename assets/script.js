@@ -43,7 +43,7 @@ function getShows(artistName) { //when function called, will be passed the artis
 //       //pull the date --> will go in 'date' section of card
       concertDate = $('.date-'+i);
       let date = data.data[i].startDate;
-      $(concertDate).text(date.substring());
+      $(concertDate).text(date.substring(0,10));
 //       //get band name (could also just use user input result)
       let artist = $('.artist-name-'+i);
       $(artist).text(' ' + data.data[i].name + ' ');
