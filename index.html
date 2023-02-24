@@ -28,11 +28,26 @@
     </figure>
   </header>
 
-    <div class="search-container column is-4 is-offset-4"> <!--search container w/ input and button-->
+    <div class="search-container  column is-4 is-offset-4">
+      
         <label for="search-input" ></label>
-        <input type="text" class="input is-primary " id="search-input" placeholder="Find the Goods">
-        <button id="search-button" class="button is-primary">Let's GO!</button>
+        
+        <input type="text" class="input  is-large" id="search-input" placeholder="name your favourite's artist">
+        <!-- <button id="search-button" class="button is-large column is-offset-4">Let's GO!</button> -->
+        <div id="wrapper">
+          <a href="#" class="my-super-cool-btn" id="search-button">
+            <div class="dots-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <span>Go!</span>
+          </a>
+        </div> 
+         
     </div>  
+   
     
     <div id="results-container">
         
@@ -227,7 +242,28 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="assets/script.js"></script>
-    
+    <script>
+var granimInstance = new Granim({
+    element: '#canvas-image-blending',
+    direction: 'top-bottom',
+    isPausedWhenNotInView: true,
+    image : {
+        source: './assets/1677169700.jpg',
+        blendingMode: 'multiply'
+    },
+    states : {
+        "default-state": {
+            gradients: [
+                ['#29323c', '#485563'],
+                ['#FF6B6B', '#556270'],
+                ['#80d3fe', '#7ea0c4'],
+                ['#f0ab51', '#eceba3']
+            ],
+            transitionSpeed: 7000
+        }
+    }
+});
+</script>
     
 </body>
 </html>
