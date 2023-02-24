@@ -123,6 +123,7 @@ function saveCard(event){
   newCard.classList.add("card");
   newCard.innerHTML = event.target.innerHTML;
  $(savedCarousel).append(newCard);
+ localStorage.setItem('Saved', $(savedCarousel).innerHTML);
 }
 
 $(slide1).on('click', saveCard);
