@@ -1,25 +1,15 @@
-.card {
-    margin-left: 5px;
-}
 
-
-.swiper {
-    width: 85%;
-  };
-/* need to get border to work */
 .header-border {
     border: 5px solid orange;
 }
 
-/* #search-button {
-    border-radius: 10px;
-    background-color:rgb(255, 162, 24);
 
-} */
+
+/* 
 .search-container {
     border: 10px;
     border-color: orange;   
-}
+} */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:900');
 
 body{
