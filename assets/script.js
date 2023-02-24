@@ -29,12 +29,8 @@ function getShows(artistName) { //when function called, will be passed the artis
       return response.json();
     })
     .then(function (data) {
-//       // do a loop (to 5?) to populate each card with a concert info
-      
+//     do a loop to populate each card with a concert info 
       for(i= 0; i<5; i++) {
-      console.log(data);
-      console.log(i);
-      console.log(data.data[i]); // see one response object
 //       // pull the lon, lat --> these values will be put into the map-img src of the card to display a map based on those coords
       let lat = data.data[i].location.geo.latitude;
       let lon = data.data[i].location.geo.longitude;
@@ -50,8 +46,6 @@ function getShows(artistName) { //when function called, will be passed the artis
       $(venue).text(data.data[i].location.name);
 //       //get band image (if available)
       let bandImage = $("#artist-image-"+i);
-      console.log(bandImage);
-      console.log(data.data[i].image);
       $(bandImage).attr("src", data.data[i].image); //sets top img of card to whatever image was given from api for current artist/band
 //       // grab city/region
       let city = $(".city-"+i);
@@ -62,9 +56,10 @@ function getShows(artistName) { //when function called, will be passed the artis
       let banner = $('.banner-'+i);
       $(banner).text('Wanna see '+ data.data[i].name + ' play live in '+ data.data[i].location.address.addressLocality + '??');
       
-      let myMap = document.getElementById(`map-image-${i}`); //this will eventually be the img a given card
-
-      myMap.setAttribute("src", `https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/url-https%3A%2F%2Fdocs.mapbox.com%2Fapi%2Fimg%2Fcustom-marker.png(${lon},${lat})/${lon},${lat},11/300x300?access_token=pk.eyJ1IjoiamRyODg4OCIsImEiOiJjbGVmdTg1bXowYmxmM3ludjJscjNlcWk5In0.T8Nn1lRMy558npSqRLS71w`);
+      let myMap = document.getElementById(`map-image-${i}`); //target placeholder for map
+      //put map in placeholder img spot
+      myMap.setAttribute("src", `https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/url-https%3A%2F%2Fdocs.mapbox.com%2Fapi%2Fimg%2Fcustom-marker.png(${lon},${lat})/${lon},${lat},11/500x500?access_token=pk.eyJ1IjoiamRyODg4OCIsImEiOiJjbGVmdTg1bXowYmxmM3ludjJscjNlcWk5In0.T8Nn1lRMy558npSqRLS71w`);
+      console.log(`https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/url-https%3A%2F%2Fdocs.mapbox.com%2Fapi%2Fimg%2Fcustom-marker.png(${lon},${lat})/${lon},${lat},11/500x500?access_token=pk.eyJ1IjoiamRyODg4OCIsImEiOiJjbGVmdTg1bXowYmxmM3ludjJscjNlcWk5In0.T8Nn1lRMy558npSqRLS71w`)
       } //ends loop
     })
     .catch(err => console.error(err));
