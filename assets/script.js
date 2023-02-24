@@ -15,7 +15,7 @@ $(searcher).on('click', function() {
   const options = {
     method: 'GET',
     headers: { //define options for fetch below
-      // 'X-RapidAPI-Key': '', 
+      'X-RapidAPI-Key': '3fdcf50bafmsh314ad737bf310e6p17a2f8jsnc654ee3d4629', 
       'X-RapidAPI-Host': 'concerts-artists-events-tracker.p.rapidapi.com'
     }
   };
@@ -32,55 +32,39 @@ function getShows(artistName) { //when function called, will be passed the artis
       let i = 0; //just trying one "iteration" for now
       console.log(data);
       console.log(data.data[i]); // see one response object
-//       // pull the lon, lat --> these values will be put into the img src of the card to display a map based on those coords
+//       // pull the lon, lat --> these values will be put into the map-img src of the card to display a map based on those coords
       let lat = data.data[i].location.geo.latitude;
       let lon = data.data[i].location.geo.longitude;
 //       //pull the date --> will go in 'date' section of card
-      $('#concert-date').text(data.data[i].startDate);
+      concertDate = $('.date-'+i);
+      $(concertDate).text(data.data[i].startDate);
 //       //get band name (could also just use user input result)
-      $('#band-name').text(data.data[i].name);
+      let artist = $('.artist-name-'+i);
+      $(artist).text(' ' + data.data[i].name + ' ');
 //       // get venue name
-      $('#venue').text(data.data[i].location.name);
+      let venue = $('.venue-'+i);
+      $(venue).text(data.data[i].location.name);
 //       //get band image (if available)
-      let bandImage = document.getElementById("band-img");
-      bandImage.setAttribute("src", data.data[i].image); //sets top img of card to whatever image was given from api for current artist/band
+      let bandImage = $("#artist-image-"+i);
+      console.log(bandImage);
+      console.log(data.data[i].image);
+      $(bandImage).attr("src", data.data[i].image); //sets top img of card to whatever image was given from api for current artist/band
 //       // grab city/region
-      let city = data.data[i].location.address.addressLocality;
+      let city = $(".city-"+i);
+      $(city).text(data.data[i].location.address.addressLocality) 
 //       //grab country
-      let country = data.data[i].location.address.addressCountry;
-      let address = document.getElementById("address"); 
-      $(address).text(city + ", "+ country) //puts city&country into address text area
+      let country = $(".country-"+i);
+      $(country).text(data.data[i].location.address.addressCountry);
+      
+      let myMap = document.getElementById(`map-image-${i}`); //this will eventually be the img a given card
 
-      let myMap = document.getElementById("map-img"); //this will eventually be the img a given card
-
-   myMap.setAttribute("src", `https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/url-https%3A%2F%2Fdocs.mapbox.com%2Fapi%2Fimg%2Fcustom-marker.png(${lon},${lat})/${lon},${lat},11/300x300?access_token=pk.eyJ1IjoiamRyODg4OCIsImEiOiJjbGVmdTg1bXowYmxmM3ludjJscjNlcWk5In0.T8Nn1lRMy558npSqRLS71w`);
+      myMap.setAttribute("src", `https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/url-https%3A%2F%2Fdocs.mapbox.com%2Fapi%2Fimg%2Fcustom-marker.png(${lon},${lat})/${lon},${lat},11/300x300?access_token=pk.eyJ1IjoiamRyODg4OCIsImEiOiJjbGVmdTg1bXowYmxmM3ludjJscjNlcWk5In0.T8Nn1lRMy558npSqRLS71w`);
 
     })
     .catch(err => console.error(err));
     
 };
 
-// var granimInstance = new Granim({
-//   element: '#canvas-image-blending',
-//   direction: 'top-bottom',
-//   isPausedWhenNotInView: true,
-//   image : {
-//       source: 'assets/groupiehero_720.png',
-//       blendingMode: 'multiply',
-//       stretchMode: ['stretch-if-bigger','none']
-//   },
-//   states : {
-//       "default-state": {
-//           gradients: [
-//               ['#29323c', '#485563'],
-//               ['#FF6B6B', '#556270'],
-//               ['#80d3fe', '#7ea0c4'],
-//               ['#f0ab51', '#eceba3']
-//           ],
-//           transitionSpeed: 7000
-//       }
-//   }
-// });
 
 const swiper = new Swiper('.swiper', {
       // Optional parameters
