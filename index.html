@@ -7,19 +7,17 @@
     <title>Groupie Gang</title>
     <!-- bulma stylesheet before default stylesheet -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link
-    rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="assets/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <!-- granim gradient js library -->
-    <!-- <script src = "https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.js"></script> -->
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.js"></script>
 </head>
 <body>
   <header class="columns">
     <!-- <canvas class="column is-12-mobile" id="canvas-image-blending"></canvas> granim gradient element -->
     <figure class="image column is-12">
       <!-- img for map -->
-      <img class="" id="" src="assets/groupiehero_720.png" alt="Placeholder image">
+      <img class="" id="map-img" src="./assets/groupiehero_720.remini-enhanced.jpg" alt="Placeholder image">
     </figure>
   </header>
 
@@ -33,10 +31,10 @@
         
     </div>
     <br/>
-    <!-- slider main container -->
-    <div class="swiper">
-    <div class="columns swiper-wrapper">
-        <div class="card column is-6 is-offset-3 is-8-mobile is-offset-2-mobile swiper-slide">
+
+    <div class="columns">
+       
+        <div class="card column is-6 is-offset-3 is-8-mobile is-offset-2-mobile">
             <div class="card-image">
               <div class="media-content">
         <p class="title is-4">John Smith</p>
@@ -75,52 +73,10 @@
                 <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
               </div>
             </div>
-        </div>
-        <div class="card column is-6 is-offset-3 is-8-mobile is-offset-2-mobile swiper-slide">
-          <div class="card-image">
-            <figure class="image is-2by2">
-              <!-- img for map -->
-              <img class="" id="map-img" src="https://versions.bulma.io/0.7.0/images/placeholders/1280x960.png" alt="Placeholder image">
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="media">
-              <div class="media-left">
-                <figure class="image is-128x128">
-                  <!-- band photo goes here -->
-                  <img id="band-img"src="https://versions.bulma.io/0.7.0/images/placeholders/96x96.png" alt="Placeholder image">
-                </figure>
-              </div>
-              <div class="media-content media-right">
-                <p id="band-name"class="title is-4">Gerome</p> <!--band name-->
-                <p id="concert-date"class="title is-4">Wilbur</p> <!--concert date-->
-                <p id="venue"class="title is-4">Elmo</p> <!-- venue name -->
-                <p id="address"class="title is-4">Gargamel</p> <!--city, country-->
-              </div>
-            </div>
-        
-            <div class="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-              <a href="#">#css</a> <a href="#">#responsive</a>
-              <br>
-              <time datetime="2016-1-1">9:09 AM - 4 June 2019</time>
-            </div>
-          </div>
-      </div>
+
     </div>
-        <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
 
-  <!-- If we need navigation buttons -->
-   <div class="swiper-button-prev"></div>
-   <div class="swiper-button-next"></div>
-  </div>
-
-
-
-
-  <div class="card">
+    <div class="card">
   <div class="card-image">
     <figure class="image is-4by3">
       <img src="https://versions.bulma.io/0.7.0/images/placeholders/1280x960.png" id="map" alt="Placeholder image">
@@ -132,42 +88,17 @@
         <figure class="image is-48x48">
           <img src="https://versions.bulma.io/0.7.0/images/placeholders/96x96.png" alt="Placeholder image">
         </figure>
-        </div>
+      </div>
       <div class="media-content">
         <p class="title is-4">John Smith</p>
         <p class="subtitle is-6">@johnsmith</p>
       </div>
     </div>
-    </div>
-    </div>
-
-
-<!-- Slider secondary container -->
-<!-- this can be a placeholder for a secondary carousel, would need some additional implimentation -->
-<!-- <div class="swiper2"> -->
-  <!-- Additional required wrapper -->
-  <!-- <div class="swiper-wrapper"> -->
-    <!-- Slides -->
-    <!-- <div class="swiper-slide">Slide 1</div>
-    <div class="swiper-slide">Slide 2</div>
-    <div class="swiper-slide">Slide 3</div> -->
-    <!-- ...
-  </div> -->
-  <!-- If we need pagination -->
-  <!-- <div class="swiper-pagination"></div> -->
-
-  <!-- If we need navigation buttons -->
-  <!-- <div class="swiper-button-prev"></div> -->
-  <!-- <div class="swiper-button-next"></div> -->
-
-  <!-- If we need scrollbar -->
-  <!-- <div class="swiper-scrollbar"></div>
-</div> -->
 
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="node_modules/granim/dist/granim.min.js"></script>
     <script src="assets/script.js"></script>
     <script>
 var granimInstance = new Granim({
