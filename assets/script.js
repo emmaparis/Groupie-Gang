@@ -3,6 +3,7 @@
   //target search input and button
 var searchInput = $('#search-input');
 var searcher = $('#search-button');
+var savedCarousel = $('#saved-carousel');
 
 //when user types artist name and clicks button, calls function w/fetch, passing whatever was typed as the artist name
 $(searcher).on('click', function() {
@@ -68,25 +69,56 @@ function getShows(artistName) { //when function called, will be passed the artis
     
 };
 
-
-const swiper = new Swiper('.swiper', {
+// this swiper carousel is for search results
+const swiper1 = new Swiper('.swiper1', {
       // Optional parameters
       direction: 'horizontal',
       loop: true,
     
       // If we need pagination
       pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper1-pagination',
       },
     
       // Navigation arrows
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper1-button-next',
+        prevEl: '.swiper1-button-prev',
       },
     
       // And if we need scrollbar
       scrollbar: {
-        el: '.swiper-scrollbar',
+        el: '.swiper1-scrollbar',
       },
     });
+// this swiper carousel is for saved items
+const swiper2 = new Swiper('.swiper2', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+    
+      // If we need pagination
+      // pagination: {
+      //   el: '.swiper2-pagination',
+      // },
+    
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper2-button-next',
+        prevEl: '.swiper2-button-prev',
+      },
+    
+      // And if we need scrollbar
+      // scrollbar: {
+      //   el: '.swiper2-scrollbar',
+      // },
+    });
+
+
+function saveCard(){
+  // need to take the innerHTML of the card clicked on and just copy it into the saved concerts
+}
+
+function storeSaved(){
+  // save the inner html (all the cards) of the saved carousel to the local storage
+}

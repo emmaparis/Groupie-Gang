@@ -3,7 +3,7 @@ body {
 }
 
 
-.swiper {
+.swiper-container {
     width: 85%;
   };
 /* need to get border to work */
