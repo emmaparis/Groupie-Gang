@@ -275,8 +275,30 @@ body{
     opacity:0;
   }
 }
-#card {
+#card-0 {
     font-family: 'Raleway', sans-serif;
     font-weight: bolder;
     background-color: #F3CF14;
 }
+#card-1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    background-color: #F3CF14;
+}
+#card-2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    background-color: #F3CF14;
+}
+#card-3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    background-color: #F3CF14;
+}
+#card-4 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    background-color: #F3CF14;
+}
+
+
