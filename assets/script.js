@@ -4,6 +4,7 @@
 var searchInput = $('#search-input');
 var searcher = $('#search-button');
 var savedCarousel = $('#saved-carousel');
+var slide1 = $('.slide_1');
 
 //when user types artist name and clicks button, calls function w/fetch, passing whatever was typed as the artist name
 $(searcher).on('click', function() {
@@ -115,14 +116,16 @@ const swiper2 = new Swiper('.swiper2', {
     });
 
 
-function saveCard(){
+function saveCard(event){
   // need to take the innerHTML of the card clicked on and just copy it into the saved concerts
   var newCard = document.createElement('div');
   newCard.classList.add("swiper-slide");
   newCard.classList.add("card");
-  listItem.innerHTML = 'blah';
-  savedCarousel.appendChild(newCard);
+  newCard.innerHTML = event.target.innerHTML;
+ $(savedCarousel).append(newCard);
 }
+
+$(slide1).on('click', saveCard);
 
 function storeSaved(){
   // save the inner html (all the cards) of the saved carousel to the local storage
