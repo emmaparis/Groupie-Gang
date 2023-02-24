@@ -9,24 +9,49 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link
     rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--Link to UnifrakturMaguntia-->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="UnifrakturMaguntia">
+<!--Link to Libre Franklin Font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&family=UnifrakturMaguntia&display=swap" rel="Libre Franklin">
     <link rel="stylesheet" href="assets/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <!-- granim gradient js library -->
-    <!-- <script src = "https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.js"></script> -->
 </head>
 <body>
   <header class="columns">
     <figure class="image column is-12">
-      <!-- img for map -->
+      <!-- img for header -->
       <img class="" id="" src="assets/groupiehero_720.png" alt="Placeholder image">
     </figure>
   </header>
 
-    <div class="search-container column is-4 is-offset-4"> <!--search container w/ input and button-->
+    <div class="search-container  column is-6 is-offset-4">
+      
         <label for="search-input" ></label>
-        <input type="text" class="input is-primary is-large" id="search-input" placeholder="Find the Goods">
-        <button id="search-button" class="button is-primary is-large column is-offset-4">Let's GO!</button>
+        
+        <input type="text" class="input  is-large" id="search-input" placeholder="name your favourite artist">
+        <!-- <button id="search-button" class="button is-large column is-offset-4">Let's GO!</button> -->
+        <div id="wrapper">
+          <a href="#" class="my-super-cool-btn" id="search-button">
+            <div class="dots-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <span>Go!</span>
+          </a>
+        </div> 
+         
     </div>  
+   
+    
+    <div id="results-container">
+        
+    </div>
     
     <br/>
 <!-- this is the carousel for the saved cards -->
@@ -39,15 +64,13 @@
     </div>
 
     <br/>
-    <!-- slider main container -->
-  <div class="swiper-container swiper1 columns">
+<div class="swiper-container swiper1 columns">
     <div class="columns swiper-wrapper">
 
       <!-- jimmy's signature reformatted card 0 (index 0) -->
         <div class="card is-12-mobile swiper-slide slide_1">
           <header class="card-header has-background-link-dark header-border">
-            <p class="card-header-title is-size-4 is-centered has-text-light">
-            <span class="artist-name-0"></span><span class="city-0"></span>
+            <p class="card-header-title is-size-4 is-centered has-text-light banner-0">
             </p>
           </header>
             <div class="card-image">
@@ -75,8 +98,7 @@
     <!-- next card (index 1) -->
         <div class="card is-12-mobile swiper-slide slide_2">
           <header class="card-header has-background-link-dark header-border">
-            <p class="card-header-title is-centered has-text-light">
-              Wanna see <span class="artist-name-1"></span> in <span class="city-1"></span>?
+            <p class="card-header-title is-centered has-text-light banner-1">
             </p>
           </header>
             <div class="card-image">
@@ -91,7 +113,7 @@
                 </div>
                 <div class="media-content media-right">
                 </div>
-                <figure class="image is-128x128">
+                <figure class="image is-100x100">
                     <img id="artist-image-1"src="https://versions.bulma.io/0.7.0/images/placeholders/96x96.png" alt="Placeholder image">
                   </figure>
               </div>
@@ -103,8 +125,7 @@
       <!-- 3rd card (index 2) -->
           <div class="is-12-mobile swiper-slide slide_3">
             <header class="card-header has-background-link-dark header-border">
-              <p class="card-header-title is-centered has-text-light">
-                Wanna see <span class="artist-name-2"></span> in <span class="city-2"></span>?
+              <p class="card-header-title is-centered has-text-light banner-2">
               </p>
             </header>
               <div class="card-image">
@@ -131,8 +152,7 @@
           <!-- 4th card (index 3) -->
           <div class="is-12-mobile swiper-slide slide_4">
             <header class="card-header has-background-link-dark header-border">
-              <p class="card-header-title is-centered has-text-light">
-                Wanna see <span class="artist-3"> someone </span> in <span class="city-3"></span>?
+              <p class="card-header-title is-centered has-text-light banner-3">
               </p>
             </header>
               <div class="card-image">
@@ -157,10 +177,9 @@
                 </figure>
           </div>
           <!-- 5th card (index 4) -->
-          <div class="card is-12-mobile swiper-slide slide_5">
+          <div class="card is-1-mobile swiper-slide slide_5">
             <header class="card-header has-background-link-dark header-border">
-              <p class="card-header-title is-centered has-text-light">
-                Wanna see <span class="artist-4"> someone </span> in <span class="city-4"></span>?
+              <p class="card-header-title is-centered has-text-light banner-4">
               </p>
             </header>
               <div class="card-image">
@@ -203,13 +222,6 @@
 </div>
 
 
-
-  
-
-
-
-
-
 <!-- Slider secondary container -->
 <!-- this can be a placeholder for a secondary carousel, would need some additional implimentation -->
 <!-- <div class="swiper2"> -->
@@ -229,16 +241,36 @@
   <!-- <div class="swiper-button-next"></div> -->
 
   <!-- If we need scrollbar -->
-  <!-- <div class="swiper-scrollbar"></div> -->
-
-
+  <!-- <div class="swiper-scrollbar"></div>
+</div> -->
 
 
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="assets/script.js"></script>
-    
+    <script>
+// var granimInstance = new Granim({
+//     element: '#canvas-image-blending',
+//     direction: 'top-bottom',
+//     isPausedWhenNotInView: true,
+//     image : {
+//         source: './assets/1677169700.jpg',
+//         blendingMode: 'multiply'
+//     },
+//     states : {
+//         "default-state": {
+//             gradients: [
+//                 ['#29323c', '#485563'],
+//                 ['#FF6B6B', '#556270'],
+//                 ['#80d3fe', '#7ea0c4'],
+//                 ['#f0ab51', '#eceba3']
+//             ],
+//             transitionSpeed: 7000
+//         }
+//     }
+// });
+// </script>
     
 </body>
 </html>
