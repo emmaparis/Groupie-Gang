@@ -10,13 +10,10 @@
     <link
     rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <!--Link to UnifrakturMaguntia-->
+    <!--Link to Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="UnifrakturMaguntia">
-<!--Link to Libre Franklin Font-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&family=UnifrakturMaguntia&display=swap" rel="Libre Franklin">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&family=Raleway&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 </head>
@@ -27,11 +24,8 @@
       <img class="" id="" src="assets/groupiehero_720.png" alt="Placeholder image">
     </figure>
   </header>
-
     <div class="search-container  column is-6 is-offset-4">
-      
         <label for="search-input" ></label>
-        
         <input type="text" class="input  is-large" id="search-input" placeholder="name your favourite artist">
         <!-- <button id="search-button" class="button is-large column is-offset-4">Let's GO!</button> -->
         <div id="wrapper">
@@ -44,15 +38,10 @@
             </div>
             <span>Go!</span>
           </a>
-        </div> 
-         
-    </div>  
-   
-    
-    <div id="results-container">
-        
+        </div>
     </div>
-    
+    <div id="results-container">
+    </div>
     <br/>
 <!-- this is the carousel for the saved cards -->
     <div class="swiper-container swiper2 columns">
@@ -66,9 +55,8 @@
     <br/>
 <div class="swiper-container swiper1 columns">
     <div class="columns swiper-wrapper">
-
       <!-- jimmy's signature reformatted card 0 (index 0) -->
-        <div class="card is-12-mobile swiper-slide slide_1">
+        <div class="card is-12-mobile swiper-slide slide_1" id="card">
           <header class="card-header has-background-link-dark header-border">
             <p class="card-header-title is-size-4 is-centered has-text-light banner-0">
             </p>
@@ -113,7 +101,7 @@
                 </div>
                 <div class="media-content media-right">
                 </div>
-                <figure class="image is-100x100">
+                <figure class="image is-128x128">
                     <img id="artist-image-1"src="https://versions.bulma.io/0.7.0/images/placeholders/96x96.png" alt="Placeholder image">
                   </figure>
               </div>
@@ -177,7 +165,7 @@
                 </figure>
           </div>
           <!-- 5th card (index 4) -->
-          <div class="card is-1-mobile swiper-slide slide_5">
+          <div class="card is-12-mobile swiper-slide slide_5">
             <header class="card-header has-background-link-dark header-border">
               <p class="card-header-title is-centered has-text-light banner-4">
               </p>
@@ -203,25 +191,18 @@
                   <img class="" id="map-image-4" src="https://versions.bulma.io/0.7.0/images/placeholders/1280x960.png" alt="Placeholder image">
                 </figure>
           </div>
-
-    </div>      
-        
+    </div>
       <!-- </div>  -->
      <!--ends swiper wrapper div-->
-
         <!-- If we need pagination -->
      <div class="swiper-pagination"></div>
-
   <!-- If we need navigation buttons -->
   <!-- <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div> -->
     <!-- if we need a scrollbar -->
     <!-- <div class="swiper-scrollbar"></div> -->
     <!--ends swiper div-->
-  
 </div>
-
-
 <!-- Slider secondary container -->
 <!-- this can be a placeholder for a secondary carousel, would need some additional implimentation -->
 <!-- <div class="swiper2"> -->
@@ -235,42 +216,35 @@
   </div> -->
   <!-- If we need pagination -->
   <!-- <div class="swiper-pagination"></div> -->
-
   <!-- If we need navigation buttons -->
   <!-- <div class="swiper-button-prev"></div> -->
   <!-- <div class="swiper-button-next"></div> -->
-
   <!-- If we need scrollbar -->
   <!-- <div class="swiper-scrollbar"></div>
 </div> -->
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="assets/script.js"></script>
     <script>
-// var granimInstance = new Granim({
-//     element: '#canvas-image-blending',
-//     direction: 'top-bottom',
-//     isPausedWhenNotInView: true,
-//     image : {
-//         source: './assets/1677169700.jpg',
-//         blendingMode: 'multiply'
-//     },
-//     states : {
-//         "default-state": {
-//             gradients: [
-//                 ['#29323c', '#485563'],
-//                 ['#FF6B6B', '#556270'],
-//                 ['#80d3fe', '#7ea0c4'],
-//                 ['#f0ab51', '#eceba3']
-//             ],
-//             transitionSpeed: 7000
-//         }
-//     }
-// });
-// </script>
-    
+var granimInstance = new Granim({
+    element: '#canvas-image-blending',
+    direction: 'top-bottom',
+    isPausedWhenNotInView: true,
+    image : {
+        source: './assets/1677169700.jpg',
+        blendingMode: 'multiply'
+    },
+    states : {
+        "default-state": {
+            gradients: [
+                ['#29323C', '#485563'],
+                ['#FF6B6B', '#556270'],
+                ['#80D3FE', '#7EA0C4'],
+                ['#F0AB51', '#ECEBA3']
+            ],
+            transitionSpeed: 7000
+        }
+    }
+});
+</script>
 </body>
 </html>
