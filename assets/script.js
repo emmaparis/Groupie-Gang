@@ -64,6 +64,8 @@ function getShows(artistName) { //when function called, will be passed the artis
       let myMap = document.getElementById(`map-image-${i}`); //this will eventually be the img a given card
 
       myMap.setAttribute("src", `https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/url-https%3A%2F%2Fdocs.mapbox.com%2Fapi%2Fimg%2Fcustom-marker.png(${lon},${lat})/${lon},${lat},11/300x300?access_token=pk.eyJ1IjoiamRyODg4OCIsImEiOiJjbGVmdTg1bXowYmxmM3ludjJscjNlcWk5In0.T8Nn1lRMy558npSqRLS71w`);
+
+      // need to implement an event listener for each slide to have an event listener for the function 'saveCard' that runs on click. Should be added after everything is populated from the search results.
       } //ends loop
     })
     .catch(err => console.error(err));
@@ -117,15 +119,20 @@ const swiper2 = new Swiper('.swiper2', {
 
 
 function saveCard(event){
-  // need to take the innerHTML of the card clicked on and just copy it into the saved concerts
+  // takes the innerHTML of the card clicked on and just copy it into the saved concerts
   var newCard = document.createElement('div');
+  // set classes to identify the slide as a slide
   newCard.classList.add("swiper-slide");
   newCard.classList.add("card");
+  // copies the innerhtml from the card clicked on and saves it inside of the new created element
   newCard.innerHTML = event.target.innerHTML;
+  // build place the new element inside of the swiper carousel
  $(savedCarousel).append(newCard);
+  // save all of the cards inside of the swiper as one big block of html and sends it to local storage to be retrieved later.
  localStorage.setItem('Saved', $(savedCarousel).html());
 }
-
+// currently set to only function on slide one
+// needs to be implemented on all cards after they have been populated by search results
 $(slide1).on('click', saveCard);
 
 function storeSaved(){
