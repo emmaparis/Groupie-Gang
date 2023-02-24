@@ -1,25 +1,15 @@
-.card {
-    margin-left: 5px;
-}
 
-
-.swiper-container {
-    width: 85%;
-  };
-/* need to get border to work */
 .header-border {
     border: 5px solid orange;
 }
 
-/* #search-button {
-    border-radius: 10px;
-    background-color:rgb(255, 162, 24);
 
-} */
+
+/* 
 .search-container {
     border: 10px;
     border-color: orange;   
-}
+} */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:900');
 
 body{
@@ -275,8 +265,30 @@ body{
     opacity:0;
   }
 }
-#card {
+#card-0 {
     font-family: 'Raleway', sans-serif;
     font-weight: bolder;
     background-color: #F3CF14;
 }
+#card-1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    background-color: #F3CF14;
+}
+#card-2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    background-color: #F3CF14;
+}
+#card-3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    background-color: #F3CF14;
+}
+#card-4 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    background-color: #F3CF14;
+}
+
+
