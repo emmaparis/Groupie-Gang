@@ -267,3 +267,8 @@ body{
     opacity:0;
   }
 }
+#card {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    background-color: #F3CF14;
+}
