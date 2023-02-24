@@ -77,18 +77,18 @@ const swiper1 = new Swiper('.swiper1', {
     
       // If we need pagination
       pagination: {
-        el: '.swiper1-pagination',
+        el: '.swiper-pagination',
       },
     
       // Navigation arrows
-      navigation: {
-        nextEl: '.swiper1-button-next',
-        prevEl: '.swiper1-button-prev',
-      },
+      // navigation: {
+      //   nextEl: '.swiper-button-next',
+      //   prevEl: '.swiper-button-prev',
+      // },
     
       // And if we need scrollbar
       scrollbar: {
-        el: '.swiper1-scrollbar',
+        el: '.swiper-scrollbar',
       },
     });
 // this swiper carousel is for saved items
@@ -99,24 +99,29 @@ const swiper2 = new Swiper('.swiper2', {
     
       // If we need pagination
       // pagination: {
-      //   el: '.swiper2-pagination',
+      //   el: '.swiper-pagination',
       // },
     
       // Navigation arrows
       navigation: {
-        nextEl: '.swiper2-button-next',
-        prevEl: '.swiper2-button-prev',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
     
       // And if we need scrollbar
       // scrollbar: {
-      //   el: '.swiper2-scrollbar',
+      //   el: '.swiper-scrollbar',
       // },
     });
 
 
 function saveCard(){
   // need to take the innerHTML of the card clicked on and just copy it into the saved concerts
+  var newCard = document.createElement('div');
+  newCard.classList.add("swiper-slide");
+  newCard.classList.add("card");
+  listItem.innerHTML = 'blah';
+  savedCarousel.appendChild(newCard);
 }
 
 function storeSaved(){
