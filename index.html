@@ -7,98 +7,240 @@
     <title>Groupie Gang</title>
     <!-- bulma stylesheet before default stylesheet -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link
+    rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="assets/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <!-- granim gradient js library -->
-    <script src = "https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.js"></script>
+    <!-- <script src = "https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.js"></script> -->
 </head>
 <body>
   <header class="columns">
-    <!-- <canvas class="column is-12-mobile" id="canvas-image-blending"></canvas> granim gradient element -->
     <figure class="image column is-12">
       <!-- img for map -->
-      <img class="" id="map-img" src="./assets/groupiehero_720.remini-enhanced.jpg" alt="Placeholder image">
+      <img class="" id="" src="assets/groupiehero_720.png" alt="Placeholder image">
     </figure>
   </header>
 
-    <div class="search-container column is-4 is-offset-4"> <!--search container w/ input and button-->
+    <div class="search-container  column is-4 is-offset-4">
+      
         <label for="search-input" ></label>
-        <input type="text" class="input is-primary " id="search-input" placeholder="Find the Goods">
-        <button id="search-button" class="button is-primary">Let's GO!</button>
-    </div>  
-    
-    <div id="results-container">
         
-    </div>
+        <input type="text" class="input  is-large" id="search-input" placeholder="name your favourite's artist">
+        <!-- <button id="search-button" class="button is-large column is-offset-4">Let's GO!</button> -->
+        <div id="wrapper">
+          <a href="#" class="my-super-cool-btn" id="search-button">
+            <div class="dots-container">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <span>Go!</span>
+          </a>
+        </div> 
+         
+    </div>  
+   
+    
     <br/>
+    <!-- slider main container -->
+  <div class="swiper columns">
+    <div class="columns swiper-wrapper">
 
-    <div class="columns">
-       
-        <div class="card column is-6 is-offset-3 is-8-mobile is-offset-2-mobile">
+      <!-- jimmy's signature reformatted card 0 (index 0) -->
+        <div class="card is-12-mobile swiper-slide slide_1">
+          <header class="card-header has-background-link-dark header-border">
+            <p class="card-header-title is-size-4 is-centered has-text-light">
+            <span class="artist-name-0"></span><span class="city-0"></span>
+            </p>
+          </header>
             <div class="card-image">
-              <div class="media-content">
-        <p class="title is-4">John Smith</p>
-        <p class="subtitle is-6">@johnsmith</p>
-      </div>
             </div>
             <div class="card-content">
-              <div class="media">
+            <div class="media">
+              <div class="media-left">
+                <p class="date-0">date1</p>
+                <p class="artist-name-0">band</p>
+                <p class="venue-0"> venue name</p>
+                <p class="city-0"> City,</p>
+                  <p class="country-0"> Country</p>
+              </div>
+              <div class="media-content media-right">
+              </div>
+              <figure class="image">
+                  <img id="artist-image-0"src="https://bulma.io/images/placeholders/128x128.png" alt="Placeholder image">
+                </figure>
+            </div>
+          </div>
+          <figure class="image is-1by1">
+              <img class="" id="map-image-0" src="https://versions.bulma.io/0.7.0/images/placeholders/1280x960.png" alt="Placeholder image">
+            </figure>
+        </div>
+    <!-- next card (index 1) -->
+        <div class="card is-12-mobile swiper-slide slide_2">
+          <header class="card-header has-background-link-dark header-border">
+            <p class="card-header-title is-centered has-text-light">
+              Wanna see <span class="artist-name-1"></span> in <span class="city-1"></span>?
+            </p>
+          </header>
+            <div class="card-image">
+            </div>
+            <div class="card-content">
+            <div class="media">
                 <div class="media-left">
-                  
+                  <p class="date-1">02-28-2023</p>
+                  <p>See <span class="artist-name-1">Motley Crue</span>  live </p>
+                  <p>at <span class="venue-1">Parque de Voila</span></p>
+                    <p>in <span class="city-1">Bogota</span>, <span class="country-1">Colombia</span></p>
                 </div>
                 <div class="media-content media-right">
-                  <p id="band-name"class="title is-4">John Smith</p> <!--band name-->
-                  <p id="concert-date"class="title is-4">John Smith</p> <!--concert date-->
-                  <p id="venue"class="title is-4">John Smith</p> <!-- venue name -->
-                  <p id="address"class="title is-4">John Smith</p> <!--city, country-->
-                
                 </div>
                 <figure class="image is-128x128">
-                    <!-- band photo goes here -->
-                    <img id="band-img"src="https://versions.bulma.io/0.7.0/images/placeholders/96x96.png" alt="Placeholder image">
+                    <img id="artist-image-1"src="https://versions.bulma.io/0.7.0/images/placeholders/96x96.png" alt="Placeholder image">
                   </figure>
-                
+              </div>
+            </div>
+            <figure class="image is-2by2">
+                <img class="" id="map-image-1" src="https://versions.bulma.io/0.7.0/images/placeholders/1280x960.png" alt="Placeholder image">
+              </figure>
+          </div>
+      <!-- 3rd card (index 2) -->
+          <div class="is-12-mobile swiper-slide slide_3">
+            <header class="card-header has-background-link-dark header-border">
+              <p class="card-header-title is-centered has-text-light">
+                Wanna see <span class="artist-name-2"></span> in <span class="city-2"></span>?
+              </p>
+            </header>
+              <div class="card-image">
+              </div>
+              <div class="card-content">
+              <div class="media">
+                  <div class="media-left">
+                    <p class="date-2">date</p>
+                    <p>See <span class="artist-name-2">band</span>  live </p>
+                    <p>at <span class="venue-2">Parque de Voila</span></p>
+                      <p>in <span class="city-2">Bogota</span>, <span class="country-2">Colombia</span></p>
+                  </div>
+                  <div class="media-content media-right">
+                  </div>
+                  <figure class="image is-128x128">
+                      <img id="artist-image-2"src="https://versions.bulma.io/0.7.0/images/placeholders/96x96.png" alt="Placeholder image">
+                    </figure>
+                </div>
               </div>
               <figure class="image is-2by2">
-                <!-- img for map -->
-                <img class="" id="map-img" src="https://versions.bulma.io/0.7.0/images/placeholders/1280x960.png" alt="Placeholder image">
-              </figure>
+                  <img class="" id="map-image-2" src="https://versions.bulma.io/0.7.0/images/placeholders/1280x960.png" alt="Placeholder image">
+                </figure>
             </div>
-          
-              <div class="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                <a href="#">#css</a> <a href="#">#responsive</a>
-                <br>
-                <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+          <!-- 4th card (index 3) -->
+          <div class="is-12-mobile swiper-slide slide_4">
+            <header class="card-header has-background-link-dark header-border">
+              <p class="card-header-title is-centered has-text-light">
+                Wanna see <span class="artist-3"> someone </span> in <span class="city-3"></span>?
+              </p>
+            </header>
+              <div class="card-image">
               </div>
-            </div>
+              <div class="card-content">
+              <div class="media">
+                  <div class="media-left">
+                    <p class="date-3">date</p>
+                    <p>See <span class="artist-name-1">artist</span>  live </p>
+                    <p>at <span class="venue-3">venue name</span></p>
+                      <p>in <span class="city-3">Bogota</span>, <span class="country-3">Colombia</span></p>
+                  </div>
+                  <div class="media-content media-right">
+                  </div>
+                  <figure class="image is-128x128">
+                      <img id="artist-image-3"src="https://versions.bulma.io/0.7.0/images/placeholders/96x96.png" alt="Placeholder image">
+                    </figure>
+                </div>
+              </div>
+              <figure class="image is-2by2">
+                  <img class="" id="map-image-3" src="https://versions.bulma.io/0.7.0/images/placeholders/1280x960.png" alt="Placeholder image">
+                </figure>
+          </div>
+          <!-- 5th card (index 4) -->
+          <div class="card is-12-mobile swiper-slide slide_5">
+            <header class="card-header has-background-link-dark header-border">
+              <p class="card-header-title is-centered has-text-light">
+                Wanna see <span class="artist-4"> someone </span> in <span class="city-4"></span>?
+              </p>
+            </header>
+              <div class="card-image">
+              </div>
+              <div class="card-content">
+              <div class="media">
+                  <div class="media-left">
+                    <p class="date-4">date</p>
+                    <p>See <span class="artist-name-4">artist</span>  live </p>
+                    <p>at <span class="venue-4">Parque de Voila</span></p>
+                      <p>in <span class="city-4">Bogota</span>, <span class="country-4">Colombia</span></p>
+                  </div>
+                  <div class="media-content media-right">
+                  </div>
+                  <figure class="image is-128x128">
+                      <img id="artist-image-4"src="https://versions.bulma.io/0.7.0/images/placeholders/96x96.png" alt="Placeholder image">
+                    </figure>
+                </div>
+              </div>
+              <figure class="image is-2by2">
+                  <img class="" id="map-image-4" src="https://versions.bulma.io/0.7.0/images/placeholders/1280x960.png" alt="Placeholder image">
+                </figure>
+          </div>
 
-    </div>
+    </div>      
+        
+      <!-- </div>  -->
+     <!--ends swiper wrapper div-->
 
-    <div class="card">
-  <div class="card-image">
-    <figure class="image is-4by3">
-      <img src="https://versions.bulma.io/0.7.0/images/placeholders/1280x960.png" id="map" alt="Placeholder image">
-    </figure>
-  </div>
-  <div class="card-content">
-    <div class="media">
-      <div class="media-left">
-        <figure class="image is-48x48">
-          <img src="https://versions.bulma.io/0.7.0/images/placeholders/96x96.png" alt="Placeholder image">
-        </figure>
-      </div>
-      <div class="media-content">
-        <p class="title is-4">John Smith</p>
-        <p class="subtitle is-6">@johnsmith</p>
-      </div>
-    </div>
+        <!-- If we need pagination -->
+     <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!--ends swiper div-->
+  
+</div>
 
 
 
+  
 
-    <script src="node_modules/granim/dist/granim.min.js"></script>
+
+
+
+
+<!-- Slider secondary container -->
+<!-- this can be a placeholder for a secondary carousel, would need some additional implimentation -->
+<!-- <div class="swiper2"> -->
+  <!-- Additional required wrapper -->
+  <!-- <div class="swiper-wrapper"> -->
+    <!-- Slides -->
+    <!-- <div class="swiper-slide">Slide 1</div>
+    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">Slide 3</div> -->
+    <!-- ...
+  </div> -->
+  <!-- If we need pagination -->
+  <!-- <div class="swiper-pagination"></div> -->
+
+  <!-- If we need navigation buttons -->
+  <!-- <div class="swiper-button-prev"></div> -->
+  <!-- <div class="swiper-button-next"></div> -->
+
+  <!-- If we need scrollbar -->
+  <!-- <div class="swiper-scrollbar"></div> -->
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="assets/script.js"></script>
     <script>
 var granimInstance = new Granim({
