@@ -8,6 +8,7 @@ var searcher = $('#search-button');
 $(searcher).on('click', function() {
       let artistName = searchInput.val();
       getShows(artistName);
+      searchInput.val('');
 });
 
   
