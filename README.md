@@ -13,14 +13,13 @@ Made from scratch using the following acceptance criteria:
 
 ```
 
-
-The deployed page is: 
+The deployed page is: https://emmaparis.github.io/Groupie-Gang/ 
 
 The github repo is @ https://github.com/emmaparis/Groupie-Gang 
 
 Screenshot of the page:
 
-![screenshot of project](/assets/groupie-gang-demo.mp4)
+![screenshot of project]()
 ![label](assets/groupie-gang-demo.mp4)
 
 # Installation
