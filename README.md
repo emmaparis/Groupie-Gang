@@ -1,5 +1,5 @@
 ![Alt text](assets/groupiehero_720.png)
-## the hottest, dankest, radest, fastest, choicest concert finder ever
+## the hottest, dankest, raddest, fastest, choicest concert finder ever 🤘
 ## Group Project 1 (Columbia U Fullstack bootcamp)
 [![forthebadge](https://forthebadge.com/images/badges/powered-by-coffee.svg)](https://forthebadge.com)  [![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/gluten-free.svg)](https://forthebadge.com) 
 
