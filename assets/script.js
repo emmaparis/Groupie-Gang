@@ -21,8 +21,6 @@ $(searcher).on('click', function() {
     }
   };
 
-// var artistName = 'motley crue' //simple placeholder variable that will have it's value become whatever the user has typed in
-
 function getShows(artistName) { //when function called, will be passed the artist/band name that was entered
   fetch(`https://concerts-artists-events-tracker.p.rapidapi.com/artist?name=${artistName}&page=1`, options)
     .then(function (response) {
@@ -32,6 +30,7 @@ function getShows(artistName) { //when function called, will be passed the artis
 //     do a loop to populate each card with a concert info 
       for(i= 0; i<5; i++) {
 //       // pull the lon, lat --> these values will be put into the map-img src of the card to display a map based on those coords
+//need to do data.data[i] because there is an inner "data" object
       let lat = data.data[i].location.geo.latitude;
       let lon = data.data[i].location.geo.longitude;
 //       //pull the date --> will go in 'date' section of card
