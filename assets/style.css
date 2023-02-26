@@ -276,6 +276,7 @@ body{
   border-radius: 4px;
   background-color: #F3CF14;
   font-family: 'Raleway', sans-serif;
+  font-size: medium;
   font-weight: bold;
   cursor: pointer;
 }
