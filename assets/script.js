@@ -4,6 +4,9 @@
 var searchInput = $('#search-input');
 var searcher = $('#search-button');
 
+var saveButton = $('.save-button')
+var savedCarousel = $('#saved-carousel');
+
 //when user types artist name and clicks button, calls function w/fetch, passing whatever was typed as the artist name
 $(searcher).on('click', function() {
       let artistName = searchInput.val();
@@ -68,6 +71,7 @@ function getShows(artistName) { //when function called, will be passed the artis
       let myMap = document.getElementById(`map-image-${i}`); //target placeholder for map
       //put map in placeholder img spot w/mapbox api
       myMap.setAttribute("src", `https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/url-https%3A%2F%2Fdocs.mapbox.com%2Fapi%2Fimg%2Fcustom-marker.png(${lon},${lat})/${lon},${lat},11/500x500?access_token=pk.eyJ1IjoiamRyODg4OCIsImEiOiJjbGVmdTg1bXowYmxmM3ludjJscjNlcWk5In0.T8Nn1lRMy558npSqRLS71w`);
+      // need to save the div on click
       } //ends loop
       return;
     } //ends if
@@ -82,10 +86,10 @@ function getShows(artistName) { //when function called, will be passed the artis
 };
 
 
-const swiper = new Swiper('.swiper', {
+var swiper1 = new Swiper('.swiper1', {
       // Optional parameters
       direction: 'horizontal',
-      loop: true,
+      loop: false,
     
       // If we need pagination
       pagination: {
@@ -99,20 +103,21 @@ const swiper = new Swiper('.swiper', {
       },
     
       // And if we need scrollbar
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
+      // scrollbar: {
+      //   el: '.swiper-scrollbar',
+      // },
     });
+    
 // this swiper carousel is for saved items
-const swiper2 = new Swiper('.swiper2', {
+var swiper2 = new Swiper('.swiper2', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
 
   // If we need pagination
-  // pagination: {
-  //   el: '.swiper-pagination',
-  // },
+  pagination: {
+    el: '.swiper-pagination',
+  },
 
   // Navigation arrows
   navigation: {
@@ -129,21 +134,38 @@ const swiper2 = new Swiper('.swiper2', {
 
 function saveCard(event){
 // takes the innerHTML of the card clicked on and just copy it into the saved concerts
+var slider = $(event.target).parents()[2];
+console.log(slider);
 var newCard = document.createElement('div');
 // set classes to identify the slide as a slide
 newCard.classList.add("swiper-slide");
 newCard.classList.add("card");
 // copies the innerhtml from the card clicked on and saves it inside of the new created element
-newCard.innerHTML = event.target.innerHTML;
-// build place the new element inside of the swiper carousel
+newCard.innerHTML = slider.innerHTML;
+var cardString = JSON.stringify(newCard.innerHTML);
+console.log('breakpoint');
+console.log(cardString);
+// place the new element inside of the swiper carousel
 $(savedCarousel).append(newCard);
 // save all of the cards inside of the swiper as one big block of html and sends it to local storage to be retrieved later.
 localStorage.setItem('Saved', $(savedCarousel).html());
 }
 // currently set to only function on slide one
 // needs to be implemented on all cards after they have been populated by search results
-$(slide1).on('click', saveCard);
+
+// $(document).click(function(event) {
+//   var text = $(event.target);
+//   console.log(text);
+// });
+
+// function getParent(event){
+//   var parent = $(event.target).parents()[2];
+//   console.log(parent);
+// }
+
+$(saveButton).on('click', saveCard);
 
 function storeSaved(){
-// save the inner html (all the cards) of the saved carousel to the local storage
+  localStorage.setItem('Saved', $(savedCarousel).html());
 }
+storeSaved();
