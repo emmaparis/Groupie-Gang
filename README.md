@@ -19,7 +19,8 @@ The github repo is @ https://github.com/emmaparis/Groupie-Gang
 
 Screenshot of the page:
 
-
+![screenshot of project]()
+![label](assets/groupie-gang-demo.mp4)
 
 # Installation
 N/A
