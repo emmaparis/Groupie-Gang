@@ -62,6 +62,7 @@ N/A
   - Mapbox Static images API
   - Bulma CSS
   - Unsplash
+  - Swiper
 
 # License
 Please see the repo for license info
