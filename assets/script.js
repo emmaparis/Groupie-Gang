@@ -20,14 +20,14 @@ $(searcher).on('click', function() {
       'X-RapidAPI-Host': 'concerts-artists-events-tracker.p.rapidapi.com'
     }
   };
-
+  
 // var artistName = 'motley crue' //simple placeholder variable that will have it's value become whatever the user has typed in
 
 function getShows(artistName) { //when function called, will be passed the artist/band name that was entered
   fetch(`https://concerts-artists-events-tracker.p.rapidapi.com/artist?name=${artistName}&page=1`, options)
     .then(function (response) {
       return response.json();
-    })
+    }) 
     .then(function (data) {
 //     do a loop to populate each card with a concert info 
       for(i= 0; i<5; i++) {
