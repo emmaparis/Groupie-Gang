@@ -29,12 +29,12 @@ function getShows(artistName) { //when function called, will be passed the artis
     .then(function (data) {
 //     do a loop to populate each card with a concert info 
   myModal = document.querySelector('modal-js');
-  if (!data.data) {
-    $('.modal').addClass('is-active'); 
+  //if no data returned from search, modal will inform the user
+  if (!data.data) { 
+    $('.modal').addClass('is-active'); //show modal
+    //get rid of modal when 'close' button clicked
     $('.modal-close').on('click', function(){
-    console.log('hi');
-    $('#modal-js').removeClass('is-active');
-    
+    $('#modal-js').removeClass('is-active'); 
   })
   }
     if ((data.data.length > 0)) {
@@ -70,15 +70,9 @@ function getShows(artistName) { //when function called, will be passed the artis
       myMap.setAttribute("src", `https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/url-https%3A%2F%2Fdocs.mapbox.com%2Fapi%2Fimg%2Fcustom-marker.png(${lon},${lat})/${lon},${lat},11/500x500?access_token=pk.eyJ1IjoiamRyODg4OCIsImEiOiJjbGVmdTg1bXowYmxmM3ludjJscjNlcWk5In0.T8Nn1lRMy558npSqRLS71w`);
       } //ends loop
       return;
-    } //ends if
-    else  {
-      $('.modal').addClass('is-active') 
-    }
-     //ends conditional
+    } //ends 
     })
     .catch(err => console.error(err));
-    
-    
 };
 
 
