@@ -3,13 +3,17 @@
     border: 5px solid orange;
 }
 
+#search-id {
+    width: 200px;
+}
+#leftt {
+  font-size: x-large;
+}
+.card {
+    margin-left: 5px;
+}
 
 
-/* 
-.search-container {
-    border: 10px;
-    border-color: orange;   
-} */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:900');
 
 body{
@@ -19,7 +23,6 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 #wrapper{
-  width:30vw;
   height:30vh;
   box-sizing:border-box;
   display:flex;
@@ -290,5 +293,7 @@ body{
     font-weight: bolder;
     background-color: #F3CF14;
 }
-
+@media screen {
+  
+}
 
