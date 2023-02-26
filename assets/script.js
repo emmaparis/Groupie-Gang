@@ -103,3 +103,47 @@ const swiper = new Swiper('.swiper', {
         el: '.swiper-scrollbar',
       },
     });
+// this swiper carousel is for saved items
+const swiper2 = new Swiper('.swiper2', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  // pagination: {
+  //   el: '.swiper-pagination',
+  // },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  // scrollbar: {
+  //   el: '.swiper-scrollbar',
+  // },
+});
+
+
+function saveCard(event){
+// takes the innerHTML of the card clicked on and just copy it into the saved concerts
+var newCard = document.createElement('div');
+// set classes to identify the slide as a slide
+newCard.classList.add("swiper-slide");
+newCard.classList.add("card");
+// copies the innerhtml from the card clicked on and saves it inside of the new created element
+newCard.innerHTML = event.target.innerHTML;
+// build place the new element inside of the swiper carousel
+$(savedCarousel).append(newCard);
+// save all of the cards inside of the swiper as one big block of html and sends it to local storage to be retrieved later.
+localStorage.setItem('Saved', $(savedCarousel).html());
+}
+// currently set to only function on slide one
+// needs to be implemented on all cards after they have been populated by search results
+$(slide1).on('click', saveCard);
+
+function storeSaved(){
+// save the inner html (all the cards) of the saved carousel to the local storage
+}
