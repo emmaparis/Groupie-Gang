@@ -4,7 +4,12 @@
 var searchInput = $('#search-input');
 var searcher = $('#search-button');
 
-var saveButton = $('.save-button')
+var button1 = $('#button-1');
+var button2 = $('#button-2');
+var button3 = $('#button-3');
+var button4 = $('#button-4');
+var button5 = $('#button-5');
+
 var savedCarousel = $('#saved-carousel');
 
 //when user types artist name and clicks button, calls function w/fetch, passing whatever was typed as the artist name
@@ -134,38 +139,39 @@ var swiper2 = new Swiper('.swiper2', {
 
 function saveCard(event){
 // takes the innerHTML of the card clicked on and just copy it into the saved concerts
+console.log('initialized');
 var slider = $(event.target).parents()[2];
-console.log(slider);
+
 var newCard = document.createElement('div');
 // set classes to identify the slide as a slide
 newCard.classList.add("swiper-slide");
 newCard.classList.add("card");
 // copies the innerhtml from the card clicked on and saves it inside of the new created element
 newCard.innerHTML = slider.innerHTML;
-var cardString = JSON.stringify(newCard.innerHTML);
-console.log('breakpoint');
-console.log(cardString);
+var byeButton = $(newCard).find('.save-button');
+byeButton.remove();
 // place the new element inside of the swiper carousel
 $(savedCarousel).append(newCard);
 // save all of the cards inside of the swiper as one big block of html and sends it to local storage to be retrieved later.
 localStorage.setItem('Saved', $(savedCarousel).html());
 }
-// currently set to only function on slide one
-// needs to be implemented on all cards after they have been populated by search results
 
 // $(document).click(function(event) {
 //   var text = $(event.target);
 //   console.log(text);
 // });
 
-// function getParent(event){
-//   var parent = $(event.target).parents()[2];
-//   console.log(parent);
+// while a for loop could have been implemented to apply these event listeners, I decided to do it this way for simplicity's sake
+$(button1).on('click', saveCard);
+$(button2).on('click', saveCard);
+$(button3).on('click', saveCard);
+$(button4).on('click', saveCard);
+$(button5).on('click', saveCard);
+
+// this function prints the saved events in the array on initialization
+// function storeSaved(){
+//   $(savedCarousel).html(localStorage.getItem('Saved'));
 // }
+// storeSaved();
 
-$(saveButton).on('click', saveCard);
-
-function storeSaved(){
-  localStorage.setItem('Saved', $(savedCarousel).html());
-}
-storeSaved();
+// could use a function to hide the arrows and pagination until the list has one item.
