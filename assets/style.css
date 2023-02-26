@@ -3,9 +3,6 @@
     border: 5px solid orange;
 }
 
-#search-id {
-    width: 200px;
-}
 #leftt {
   font-size: x-large;
 }
@@ -23,11 +20,12 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 #wrapper{
-  height:30vh;
+  height:28vh;
   box-sizing:border-box;
   display:flex;
   align-items:center;
   justify-content:center;
+  
 }
 .my-super-cool-btn{
   position:relative;
@@ -310,8 +308,5 @@ body{
     font-family: 'Raleway', sans-serif;
     font-weight: bolder;
     background-color: #F3CF14;
-}
-@media screen {
-  
 }
 
