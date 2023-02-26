@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Groupie Gang</title>
+    <link rel="icon" href="./assets/groupiehero_720.png" type="icon">
     <!-- bulma stylesheet before default stylesheet -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link
@@ -24,11 +25,11 @@
       <img class="" id="" src="assets/groupiehero_720.png" alt="Placeholder image">
     </figure>
   </header>
-    <div class="search-container  column is-6 is-offset-4">
-        <label for="search-input" ></label>
-        <input type="text" class="input  is-large" id="search-input" placeholder="name your favourite artist">
+    <div class="search-container column">
+        <label for="search-input"  ></label>
+        <input type="text" class="input is-warning  is-large " id="search-input" placeholder="name your favourite artist">
         <!-- <button id="search-button" class="button is-large column is-offset-4">Let's GO!</button> -->
-        <div id="wrapper">
+        <div id="wrapper" class="$mobile-enabled-false">
           <a href="#" class="my-super-cool-btn" id="search-button">
             <div class="dots-container">
               <div class="dot"></div>
@@ -64,8 +65,8 @@
             <div class="card-image">
             </div>
             <div class="card-content">
-            <div class="media">
-              <div class="media-left">
+            <div class="media ">
+              <div class="media-left " id="leftt">
                 <p class="date-0">date1</p>
                 <p class="artist-name-0">band</p>
                 <p class="venue-0"> venue name</p>
@@ -79,14 +80,14 @@
                 </figure>
             </div>
           </div>
-          <figure class="image is-1by1">
+          <figure class="image is-sqaure column is-8 is-offset-2">
               <img class="" id="map-image-0" src="https://versions.bulma.io/0.7.0/images/placeholders/1280x960.png" alt="Placeholder image">
             </figure>
         </div>
     <!-- next card (index 1) -->
         <div class="card is-12-mobile swiper-slide slide_2" id="card-1">
           <header class="card-header has-background-link-dark header-border">
-            <p class="card-header-title is-centered has-text-light banner-1">
+            <p class="card-header-title is-size-4 is-centered has-text-light banner-1">
             </p>
           </header>
             <div class="card-image">
@@ -101,19 +102,19 @@
                 </div>
                 <div class="media-content media-right">
                 </div>
-                <figure class="image is-128x128">
+                <figure class="image">
                     <img id="artist-image-1"src="https://versions.bulma.io/0.7.0/images/placeholders/96x96.png" alt="Placeholder image">
                   </figure>
               </div>
             </div>
-            <figure class="image is-2by2">
+            <figure class="image is-sqaure column is-10 is-offset-1">
                 <img class="" id="map-image-1" src="https://versions.bulma.io/0.7.0/images/placeholders/1280x960.png" alt="Placeholder image">
               </figure>
           </div>
       <!-- 3rd card (index 2) -->
           <div class="is-12-mobile swiper-slide slide_3" id="card-2">
             <header class="card-header has-background-link-dark header-border">
-              <p class="card-header-title is-centered has-text-light banner-2">
+              <p class="card-header-title is-centered is-size-4 has-text-light banner-2">
               </p>
             </header>
               <div class="card-image">
@@ -128,19 +129,19 @@
                   </div>
                   <div class="media-content media-right">
                   </div>
-                  <figure class="image is-128x128">
+                  <figure class="image">
                       <img id="artist-image-2"src="https://versions.bulma.io/0.7.0/images/placeholders/96x96.png" alt="Placeholder image">
                     </figure>
                 </div>
               </div>
-              <figure class="image is-2by2">
+              <figure class="image is-sqaure column is-10 is-offset-1">
                   <img class="" id="map-image-2" src="https://versions.bulma.io/0.7.0/images/placeholders/1280x960.png" alt="Placeholder image">
                 </figure>
             </div>
           <!-- 4th card (index 3) -->
           <div class="is-12-mobile swiper-slide slide_4" id="card-3">
             <header class="card-header has-background-link-dark header-border">
-              <p class="card-header-title is-centered has-text-light banner-3">
+              <p class="card-header-title is-size-4 is-centered has-text-light banner-3">
               </p>
             </header>
               <div class="card-image">
@@ -155,19 +156,19 @@
                   </div>
                   <div class="media-content media-right">
                   </div>
-                  <figure class="image is-128x128">
+                  <figure class="image">
                       <img id="artist-image-3"src="https://versions.bulma.io/0.7.0/images/placeholders/96x96.png" alt="Placeholder image">
                     </figure>
                 </div>
               </div>
-              <figure class="image is-2by2">
+              <figure class="image is-sqaure column is-10 is-offset-1">
                   <img class="" id="map-image-3" src="https://versions.bulma.io/0.7.0/images/placeholders/1280x960.png" alt="Placeholder image">
                 </figure>
           </div>
           <!-- 5th card (index 4) -->
           <div class="card is-12-mobile swiper-slide slide_5" id="card-4">
             <header class="card-header has-background-link-dark header-border">
-              <p class="card-header-title is-centered has-text-light banner-4">
+              <p class="card-header-title is-size-4 is-centered has-text-light banner-4">
               </p>
             </header>
               <div class="card-image">
@@ -182,12 +183,12 @@
                   </div>
                   <div class="media-content media-right">
                   </div>
-                  <figure class="image is-128x128">
+                  <figure class="image">
                       <img id="artist-image-4"src="https://versions.bulma.io/0.7.0/images/placeholders/96x96.png" alt="Placeholder image">
                     </figure>
                 </div>
               </div>
-              <figure class="image is-2by2">
+              <figure class="image is-sqaure column is-10 is-offset-1">
                   <img class="" id="map-image-4" src="https://versions.bulma.io/0.7.0/images/placeholders/1280x960.png" alt="Placeholder image">
                 </figure>
           </div>
@@ -222,29 +223,24 @@
   <!-- If we need scrollbar -->
   <!-- <div class="swiper-scrollbar"></div>
 </div> -->
+
+  <!-- modal for when user search doesn't work -->
+  <div id="modal-js" class="modal">
+    <div class="modal-background"></div>
+  
+    <div class="modal-content">
+      <div class="box">
+        <p class="text-danger">Whoa, man! it looks like that artist isn't playing any shows, but try a different artist!</p>
+        <!-- Your content -->
+        <button class="modal-close is-large" aria-label="close"></button>
+      </div>
+    </div>
+    
+  </div>
+  <!-- end modal code -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="assets/script.js"></script>
-    <script>
-var granimInstance = new Granim({
-    element: '#canvas-image-blending',
-    direction: 'top-bottom',
-    isPausedWhenNotInView: true,
-    image : {
-        source: './assets/1677169700.jpg',
-        blendingMode: 'multiply'
-    },
-    states : {
-        "default-state": {
-            gradients: [
-                ['#29323C', '#485563'],
-                ['#FF6B6B', '#556270'],
-                ['#80D3FE', '#7EA0C4'],
-                ['#F0AB51', '#ECEBA3']
-            ],
-            transitionSpeed: 7000
-        }
-    }
-});
-</script>
+
+
 </body>
 </html>
