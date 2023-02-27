@@ -152,12 +152,27 @@ function saveCard(event){
 // takes the innerHTML of the card clicked on and just copy it into the saved concerts
 var slider = $(event.target).parents()[2];
 var newCard = document.createElement('div');
+let i = slider.getAttribute('data-pos');
+console.log(i);
 // set classes to identify the slide as a slide and style it
 newCard.classList.add("swiper-slide");
 newCard.classList.add("card");
 newCard.classList.add("saved-card");
+
+console.log($(event.target).parents()[2]);
 // copies the innerhtml from the card clicked on and saves it inside of the new created element
 newCard.innerHTML = slider.innerHTML;
+
+
+// This code removes the classes used by the above function to populate the card with data
+$(newCard).find('.date-'+i).removeClass('date-'+i);
+$(newCard).find('.artist-name-'+i).removeClass('artist-name-'+i);
+$(newCard).find('.venue-'+i).removeClass('venue-'+i);
+$(newCard).find('.city-'+i).removeClass('city-'+i);
+$(newCard).find('.country-'+i).removeClass('country-'+i);
+$(newCard).find('.artist-image-'+i).removeClass('artist-image-'+i);
+$(newCard).find('.map-image-'+i).removeClass('map-image-'+i);
+
 // gets rid of the button so that when it's saved it doesn't have a button to save it
 var byeButton = $(newCard).find('.save-button');
 byeButton.remove();
