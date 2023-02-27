@@ -35,7 +35,6 @@ $(searcher).on('click', function() {
     }
   };
 
-
 function getShows(artistName) { //when function called, will be passed the artist/band name that was entered
   fetch(`https://concerts-artists-events-tracker.p.rapidapi.com/artist?name=${artistName}&page=1`, options)
     .then(function (response) {
