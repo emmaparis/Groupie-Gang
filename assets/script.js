@@ -81,6 +81,7 @@ function getShows(artistName) { //when function called, will be passed the artis
       $(country).text(data.data[i].location.address.addressCountry);
       let banner = $('.banner-'+i);
       $(banner).text('Wanna see '+ data.data[i].name + ' play live in '+ data.data[i].location.address.addressLocality + '??');
+      $(banner).append('<button type="button" id="button-"'+ (i+1) + ' class="save-button">Save this event!</button>');
       
       let myMap = document.getElementById(`map-image-${i}`); //target placeholder for map
       //put map in placeholder img spot w/mapbox api
@@ -162,7 +163,6 @@ newCard.classList.add("saved-card");
 // copies the innerhtml from the card clicked on and saves it inside of the new created element
 newCard.innerHTML = slider.innerHTML;
 
-
 // This code removes the classes used by the above function to populate the card with data
 $(newCard).find('.date-'+i).removeClass('date-'+i);
 $(newCard).find('.artist-name-'+i).removeClass('artist-name-'+i);
@@ -173,6 +173,7 @@ $(newCard).find('.artist-image-'+i).removeClass('artist-image-'+i);
 $(newCard).find('.map-image-'+i).removeClass('map-image-'+i);
 
 // gets rid of the button so that when it's saved it doesn't have a button to save it
+// I actually did the below part before I did the above part. Could get rid of the unecessary var here but leaving it for the time being because I feel like it.
 var byeButton = $(newCard).find('.save-button');
 byeButton.remove();
 // place the new element inside of the swiper carousel
