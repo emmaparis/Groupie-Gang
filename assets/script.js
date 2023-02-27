@@ -32,11 +32,10 @@ $(searcher).on('click', function() {
   const options = {
     method: 'GET',
     headers: { //define options for fetch below
-      'X-RapidAPI-Key': '48fb8adc1dmsh6966e6d7b383838p18ff3ajsn424bb327d27c', 
+      'X-RapidAPI-Key': '3fdcf50bafmsh314ad737bf310e6p17a2f8jsnc654ee3d4629', 
       'X-RapidAPI-Host': 'concerts-artists-events-tracker.p.rapidapi.com'
     }
   };
-
 
 function getShows(artistName) { //when function called, will be passed the artist/band name that was entered
   fetch(`https://concerts-artists-events-tracker.p.rapidapi.com/artist?name=${artistName}&page=1`, options)
@@ -67,6 +66,11 @@ function getShows(artistName) { //when function called, will be passed the artis
 //       //get band name (could also just use user input result)
       let artist = $('.artist-name-'+i);
       $(artist).text(' ' + data.data[i].name + ' ');
+      let ticketLinks = $(".ticketLink-"+i)
+      let ticketURL = "https://www.ticketmaster.com/search?q=";
+      let ticketLinkHtml = "<a href='" + ticketURL + data.data[i].name + "'>buy a ticket</a>";
+      $(ticketLinks).html(ticketLinkHtml);
+      
 //       // get venue name
       let venue = $('.venue-'+i);
       $(venue).text(data.data[i].location.name);
@@ -79,6 +83,7 @@ function getShows(artistName) { //when function called, will be passed the artis
 //       //grab country
       let country = $(".country-"+i);
       $(country).text(data.data[i].location.address.addressCountry);
+    
       let banner = $('.banner-'+i);
       $(banner).text('Wanna see '+ data.data[i].name + ' play live in '+ data.data[i].location.address.addressLocality + '??');
       $(banner).append('<button type="button" id="button-"'+ (i+1) + ' class="save-button">Save this event!</button>');

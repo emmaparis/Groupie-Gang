@@ -19,14 +19,7 @@ body{
   background-color:#292929;
   font-family: 'Montserrat', sans-serif;
 }
-#wrapper{
-  height:28vh;
-  box-sizing:border-box;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  
-}
+
 .my-super-cool-btn{
   position:relative;
   text-decoration:none;
