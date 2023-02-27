@@ -11,11 +11,7 @@ var savedCarousel = $('#saved-carousel');
 var slide1 = $('.slide_1');
 
 // variables representing the 'save' buttons
-var button1 = $('#button-1');
-var button2 = $('#button-2');
-var button3 = $('#button-3');
-var button4 = $('#button-4');
-var button5 = $('#button-5');
+
 
 // the carousel that stores the saved events
 var savedCarousel = $('#saved-carousel');
@@ -86,7 +82,8 @@ function getShows(artistName) { //when function called, will be passed the artis
     
       let banner = $('.banner-'+i);
       $(banner).text('Wanna see '+ data.data[i].name + ' play live in '+ data.data[i].location.address.addressLocality + '??');
-      $(banner).append('<button type="button" id="button-"'+ (i+1) + ' class="save-button">Save this event!</button>');
+      $(banner).append('<button type="button" id="button-'+ (i+1) + '" class="save-button">Save this event!</button>');
+      $('#button-'+ (i+1)).on('click', saveCard);
       
       let myMap = document.getElementById(`map-image-${i}`); //target placeholder for map
       //put map in placeholder img spot w/mapbox api
@@ -98,7 +95,8 @@ function getShows(artistName) { //when function called, will be passed the artis
     else  {
       $('.modal').addClass('is-active') 
     }
-     //ends conditional
+     //ends 
+     setButtons();
     })
     .catch(err => console.error(err));
     
@@ -177,6 +175,7 @@ $(newCard).find('.country-'+i).removeClass('country-'+i);
 $(newCard).find('.ticket-link-'+i).removeClass('ticket-link-'+i);
 $(newCard).find('.artist-image-'+i).removeClass('artist-image-'+i);
 $(newCard).find('.map-image-'+i).removeClass('map-image-'+i);
+$(newCard).find('.banner-'+i).removeClass('banner-'+i);
 
 // gets rid of the button so that when it's saved it doesn't have a button to save it
 // I actually did the below part before I did the above part. Could get rid of the unecessary var here but leaving it for the time being because I feel like it.
@@ -189,11 +188,19 @@ localStorage.setItem('Saved', $(savedCarousel).html());
 }
 
 // while a for loop could have been implemented to apply these event listeners, I decided to do it this way for simplicity's sake
-$(button1).on('click', saveCard);
-$(button2).on('click', saveCard);
-$(button3).on('click', saveCard);
-$(button4).on('click', saveCard);
-$(button5).on('click', saveCard);
+// Its done inside of a function so that I can make certain that the button variable and corresponding event listener is updated when a new card is built
+function setButtons(){
+  var button1 = $('#button-1');
+  var button2 = $('#button-2');
+  var button3 = $('#button-3');
+  var button4 = $('#button-4');
+  var button5 = $('#button-5');
+  $(button1).on('click', saveCard);
+  $(button2).on('click', saveCard);
+  $(button3).on('click', saveCard);
+  $(button4).on('click', saveCard);
+  $(button5).on('click', saveCard);
+}
 
 // this function prints the saved events in the array on initialization
 function storeSaved(){
