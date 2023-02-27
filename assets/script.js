@@ -174,6 +174,7 @@ $(newCard).find('.artist-name-'+i).removeClass('artist-name-'+i);
 $(newCard).find('.venue-'+i).removeClass('venue-'+i);
 $(newCard).find('.city-'+i).removeClass('city-'+i);
 $(newCard).find('.country-'+i).removeClass('country-'+i);
+$(newCard).find('.ticket-link-'+i).removeClass('ticket-link-'+i);
 $(newCard).find('.artist-image-'+i).removeClass('artist-image-'+i);
 $(newCard).find('.map-image-'+i).removeClass('map-image-'+i);
 
