@@ -16,12 +16,10 @@ $(searcher).on('click', function() {
   const options = {
     method: 'GET',
     headers: { //define options for fetch below
-      'X-RapidAPI-Key': '3fdcf50bafmsh314ad737bf310e6p17a2f8jsnc654ee3d4629', 
+      'X-RapidAPI-Key': '48fb8adc1dmsh6966e6d7b383838p18ff3ajsn424bb327d27c', 
       'X-RapidAPI-Host': 'concerts-artists-events-tracker.p.rapidapi.com'
     }
   };
-  
-// var artistName = 'motley crue' //simple placeholder variable that will have it's value become whatever the user has typed in
 
 function getShows(artistName) { //when function called, will be passed the artist/band name that was entered
   fetch(`https://concerts-artists-events-tracker.p.rapidapi.com/artist?name=${artistName}&page=1`, options)
@@ -30,8 +28,19 @@ function getShows(artistName) { //when function called, will be passed the artis
     }) 
     .then(function (data) {
 //     do a loop to populate each card with a concert info 
+  myModal = document.querySelector('modal-js');
+  if (!data.data) {
+    $('.modal').addClass('is-active'); 
+    $('.modal-close').on('click', function(){
+    console.log('hi');
+    $('#modal-js').removeClass('is-active');
+    
+  })
+  }
+    if ((data.data.length > 0)) {
       for(i= 0; i<5; i++) {
 //       // pull the lon, lat --> these values will be put into the map-img src of the card to display a map based on those coords
+//need to do data.data[i] because there is an inner "data" object
       let lat = data.data[i].location.geo.latitude;
       let lon = data.data[i].location.geo.longitude;
 //       //pull the date --> will go in 'date' section of card
@@ -57,12 +66,18 @@ function getShows(artistName) { //when function called, will be passed the artis
       $(banner).text('Wanna see '+ data.data[i].name + ' play live in '+ data.data[i].location.address.addressLocality + '??');
       
       let myMap = document.getElementById(`map-image-${i}`); //target placeholder for map
-      //put map in placeholder img spot
+      //put map in placeholder img spot w/mapbox api
       myMap.setAttribute("src", `https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/url-https%3A%2F%2Fdocs.mapbox.com%2Fapi%2Fimg%2Fcustom-marker.png(${lon},${lat})/${lon},${lat},11/500x500?access_token=pk.eyJ1IjoiamRyODg4OCIsImEiOiJjbGVmdTg1bXowYmxmM3ludjJscjNlcWk5In0.T8Nn1lRMy558npSqRLS71w`);
-      console.log(`https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/url-https%3A%2F%2Fdocs.mapbox.com%2Fapi%2Fimg%2Fcustom-marker.png(${lon},${lat})/${lon},${lat},11/500x500?access_token=pk.eyJ1IjoiamRyODg4OCIsImEiOiJjbGVmdTg1bXowYmxmM3ludjJscjNlcWk5In0.T8Nn1lRMy558npSqRLS71w`)
       } //ends loop
+      return;
+    } //ends if
+    else  {
+      $('.modal').addClass('is-active') 
+    }
+     //ends conditional
     })
     .catch(err => console.error(err));
+    
     
 };
 
