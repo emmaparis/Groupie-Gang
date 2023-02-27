@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Groupie Gang</title>
+    <link rel="icon" href="./assets/groupiehero_720.png" type="icon">
     <!-- bulma stylesheet before default stylesheet -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link
-    rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <!--Link to Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,11 +24,11 @@
       <img class="" id="" src="assets/groupiehero_720.png" alt="Placeholder image">
     </figure>
   </header>
-    <div class="search-container  column is-6 is-offset-4">
-        <label for="search-input" ></label>
-        <input type="text" class="input  is-large" id="search-input" placeholder="name your favourite artist">
+    <div class="search-container column">
+        <label for="search-input"  ></label>
+        <input type="text" class="input is-warning  is-large " id="search-input" placeholder="name your favourite artist">
         <!-- <button id="search-button" class="button is-large column is-offset-4">Let's GO!</button> -->
-        <div id="wrapper">
+        <div id="wrapper" class="is-flex is-flex-direction-column  is-justify-content-center is-align-items-center mt-2 ">
           <a href="#" class="my-super-cool-btn" id="search-button">
             <div class="dots-container">
               <div class="dot"></div>
@@ -42,11 +42,12 @@
     </div>
     <div id="results-container">
     </div>
+
     <br/>
-<div class="swiper columns">
+<div class="swiper-container swiper1 columns">
     <div class="columns swiper-wrapper">
       <!-- jimmy's signature reformatted card 0 (index 0) -->
-        <div class="card is-12-mobile swiper-slide slide_1" id="card-0">
+        <div class="card is-12-mobile swiper-slide slide_1" id="card-0" data-pos="0">
           <header class="card-header has-background-link-dark header-border">
             <p class="card-header-title is-size-4 is-centered has-text-light banner-0">
             </p>
@@ -61,6 +62,7 @@
                 <p class="venue-0">Anywhere</p>
                 <p class="city-0"></p>
                   <p class="country-0"></p>
+                  <p class="ticketLink-0" >buy a ticket</p>
               </div>
               <div class="media-content media-right">
               </div>
@@ -69,170 +71,165 @@
                 </figure>
             </div>
           </div>
-          <figure class="image is-1by1">
+          <figure class="image is-sqaure column is-8 is-offset-2">
               <img class="" id="map-image-0" src="https://versions.bulma.io/0.7.0/images/placeholders/1280x960.png" alt="Placeholder image">
             </figure>
         </div>
     <!-- next card (index 1) -->
-        <div class="card is-12-mobile swiper-slide slide_2" id="card-1">
+        <div class="card is-12-mobile swiper-slide slide_2" id="card-1" data-pos="1">
           <header class="card-header has-background-link-dark header-border">
-            <p class="card-header-title is-centered has-text-light banner-1">
+            <p class="card-header-title is-size-4 is-centered has-text-light banner-1">
             </p>
           </header>
             <div class="card-image">
             </div>
             <div class="card-content">
             <div class="media">
-                <div class="media-left">
+                <div class="media-left" id="leftt">
                   <p class="date-1">02-28-2023</p>
                   <p>See <span class="artist-name-1">Motley Crue</span>  live </p>
                   <p>at <span class="venue-1">Parque de Voila</span></p>
                     <p>in <span class="city-1">Bogota</span>, <span class="country-1">Colombia</span></p>
+                    <p class="ticketLink-1" >buy a ticket</p>
                 </div>
                 <div class="media-content media-right">
                 </div>
-                <figure class="image is-128x128">
+                <figure class="image">
                     <img id="artist-image-1"src="https://versions.bulma.io/0.7.0/images/placeholders/96x96.png" alt="Placeholder image">
                   </figure>
               </div>
             </div>
-            <figure class="image is-2by2">
+            <figure class="image is-sqaure column is-10 is-offset-1">
                 <img class="" id="map-image-1" src="https://versions.bulma.io/0.7.0/images/placeholders/1280x960.png" alt="Placeholder image">
               </figure>
           </div>
       <!-- 3rd card (index 2) -->
-          <div class="is-12-mobile swiper-slide slide_3" id="card-2">
+          <div class="is-12-mobile swiper-slide slide_3" id="card-2" data-pos="2">
             <header class="card-header has-background-link-dark header-border">
-              <p class="card-header-title is-centered has-text-light banner-2">
+              <p class="card-header-title is-centered is-size-4 has-text-light banner-2">
               </p>
             </header>
               <div class="card-image">
               </div>
               <div class="card-content">
               <div class="media">
-                  <div class="media-left">
+                  <div class="media-left" id="leftt">
                     <p class="date-2">date</p>
                     <p>See <span class="artist-name-2">band</span>  live </p>
                     <p>at <span class="venue-2">Parque de Voila</span></p>
                       <p>in <span class="city-2">Bogota</span>, <span class="country-2">Colombia</span></p>
+                      <p class="ticketLink-2" >buy a ticket</p>
                   </div>
                   <div class="media-content media-right">
                   </div>
-                  <figure class="image is-128x128">
+                  <figure class="image">
                       <img id="artist-image-2"src="https://versions.bulma.io/0.7.0/images/placeholders/96x96.png" alt="Placeholder image">
                     </figure>
                 </div>
               </div>
-              <figure class="image is-2by2">
+              <figure class="image is-sqaure column is-10 is-offset-1">
                   <img class="" id="map-image-2" src="https://versions.bulma.io/0.7.0/images/placeholders/1280x960.png" alt="Placeholder image">
                 </figure>
             </div>
           <!-- 4th card (index 3) -->
-          <div class="is-12-mobile swiper-slide slide_4" id="card-3">
+          <div class="is-12-mobile swiper-slide slide_4" id="card-3" data-pos="3">
             <header class="card-header has-background-link-dark header-border">
-              <p class="card-header-title is-centered has-text-light banner-3">
+              <p class="card-header-title is-size-4 is-centered has-text-light banner-3">
               </p>
             </header>
               <div class="card-image">
               </div>
               <div class="card-content">
               <div class="media">
-                  <div class="media-left">
+                  <div class="media-left" id="leftt">
                     <p class="date-3">date</p>
                     <p>See <span class="artist-name-1">artist</span>  live </p>
                     <p>at <span class="venue-3">venue name</span></p>
                       <p>in <span class="city-3">Bogota</span>, <span class="country-3">Colombia</span></p>
+                      <p class="ticketLink-3" >buy a ticket</p>
                   </div>
                   <div class="media-content media-right">
                   </div>
-                  <figure class="image is-128x128">
+                  <figure class="image">
                       <img id="artist-image-3"src="https://versions.bulma.io/0.7.0/images/placeholders/96x96.png" alt="Placeholder image">
                     </figure>
                 </div>
               </div>
-              <figure class="image is-2by2">
+              <figure class="image is-sqaure column is-10 is-offset-1">
                   <img class="" id="map-image-3" src="https://versions.bulma.io/0.7.0/images/placeholders/1280x960.png" alt="Placeholder image">
                 </figure>
           </div>
           <!-- 5th card (index 4) -->
-          <div class="card is-12-mobile swiper-slide slide_5" id="card-4">
+          <div class="card is-12-mobile swiper-slide slide_5" id="card-4" data-pos="4">
             <header class="card-header has-background-link-dark header-border">
-              <p class="card-header-title is-centered has-text-light banner-4">
+              <p class="card-header-title is-size-4 is-centered has-text-light banner-4">
               </p>
             </header>
               <div class="card-image">
               </div>
               <div class="card-content">
               <div class="media">
-                  <div class="media-left">
+                  <div class="media-left" id="leftt">
                     <p class="date-4">date</p>
                     <p>See <span class="artist-name-4">artist</span>  live </p>
                     <p>at <span class="venue-4">Parque de Voila</span></p>
                       <p>in <span class="city-4">Bogota</span>, <span class="country-4">Colombia</span></p>
+                      <p class="ticketLink-4" >buy a ticket</p>
                   </div>
                   <div class="media-content media-right">
                   </div>
-                  <figure class="image is-128x128">
+                  <figure class="image">
                       <img id="artist-image-4"src="https://versions.bulma.io/0.7.0/images/placeholders/96x96.png" alt="Placeholder image">
                     </figure>
                 </div>
               </div>
-              <figure class="image is-2by2">
+              <figure class="image is-sqaure column is-10 is-offset-1">
                   <img class="" id="map-image-4" src="https://versions.bulma.io/0.7.0/images/placeholders/1280x960.png" alt="Placeholder image">
                 </figure>
           </div>
+    <!--ends swiper wrapper div-->
     </div>
-      <!-- </div>  -->
-     <!--ends swiper wrapper div-->
-        <!-- If we need pagination -->
-     <div class="swiper-pagination"></div>
-  <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-    <!--ends swiper div-->
+    
+    <!-- If we need pagination -->
+    <!-- <div class="swiper-pagination"></div> -->
+    <!-- If we need navigation buttons -->
+    <!-- <div class="swiper-button-prev"></div> -->
+    <!-- <div class="swiper-button-next"></div> -->
+    <!-- if we need a scrollbar -->
+    <!-- <div class="swiper-scrollbar"></div> -->
+<!--ends swiper div-->
 </div>
-<!-- Slider secondary container -->
-<!-- this can be a placeholder for a secondary carousel, would need some additional implimentation -->
-<!-- <div class="swiper2"> -->
-  <!-- Additional required wrapper -->
-  <!-- <div class="swiper-wrapper"> -->
-    <!-- Slides -->
-    <!-- <div class="swiper-slide">Slide 1</div>
-    <div class="swiper-slide">Slide 2</div>
-    <div class="swiper-slide">Slide 3</div> -->
-    <!-- ...
-  </div> -->
-  <!-- If we need pagination -->
-  <!-- <div class="swiper-pagination"></div> -->
-  <!-- If we need navigation buttons -->
-  <!-- <div class="swiper-button-prev"></div> -->
-  <!-- <div class="swiper-button-next"></div> -->
-  <!-- If we need scrollbar -->
-  <!-- <div class="swiper-scrollbar"></div>
-</div> -->
+<br/>
+
+<!-- this is the carousel for the saved cards -->
+  <div class="swiper-container swiper2 columns">
+    <!-- saved events go inside of the below div -->
+    <div id="saved-carousel" class="columns swiper-wrapper">
+    </div>
+    <!-- this is in case we want to use pagination -->
+    <!-- <div class="swiper-pagination"></div> -->
+    <!-- this is in case we want to use buttons -->
+    <!-- <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div> -->
+  </div>
+
+  <!-- modal for when user search doesn't work -->
+  <div id="modal-js" class="modal">
+    <div class="modal-background"></div>
+  
+    <div class="modal-content">
+      <div class="box">
+        <p class="text-danger">Whoa, man! it looks like that artist isn't playing any shows, but try a different artist!</p>
+        <!-- Your content -->
+        <button class="modal-close is-large" aria-label="close"></button>
+      </div>
+    </div>
+    
+  </div>
+  <!-- end modal code -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="assets/script.js"></script>
-    <script>
-var granimInstance = new Granim({
-    element: '#canvas-image-blending',
-    direction: 'top-bottom',
-    isPausedWhenNotInView: true,
-    image : {
-        source: './assets/1677169700.jpg',
-        blendingMode: 'multiply'
-    },
-    states : {
-        "default-state": {
-            gradients: [
-                ['#29323C', '#485563'],
-                ['#FF6B6B', '#556270'],
-                ['#80D3FE', '#7EA0C4'],
-                ['#F0AB51', '#ECEBA3']
-            ],
-            transitionSpeed: 7000
-        }
-    }
-});
-</script>
+
+
 </body>
 </html>
