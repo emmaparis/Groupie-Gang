@@ -87,6 +87,7 @@ function getShows(artistName) { //when function called, will be passed the artis
       let banner = $('.banner-'+i);
       $(banner).text('Wanna see '+ data.data[i].name + ' play live in '+ data.data[i].location.address.addressLocality + '??');
       $(banner).append('<button type="button" id="button-"'+ (i+1) + ' class="save-button">Save this event!</button>');
+      $('#button-'+ (i+1)).on('click', saveCard);
       
       let myMap = document.getElementById(`map-image-${i}`); //target placeholder for map
       //put map in placeholder img spot w/mapbox api
