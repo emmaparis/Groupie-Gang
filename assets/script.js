@@ -153,13 +153,12 @@ function saveCard(event){
 var slider = $(event.target).parents()[2];
 var newCard = document.createElement('div');
 let i = slider.getAttribute('data-pos');
-console.log(i);
+
 // set classes to identify the slide as a slide and style it
 newCard.classList.add("swiper-slide");
 newCard.classList.add("card");
 newCard.classList.add("saved-card");
 
-console.log($(event.target).parents()[2]);
 // copies the innerhtml from the card clicked on and saves it inside of the new created element
 newCard.innerHTML = slider.innerHTML;
 
