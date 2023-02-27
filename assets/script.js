@@ -63,7 +63,12 @@ function getShows(artistName) { //when function called, will be passed the artis
       $(concertDate).text(date.substring(0,10));
 //       //get band name (could also just use user input result)
       let artist = $('.artist-name-'+i);
+      let myTicket = $("ticket")
+      let ticketURL = "https://www.ticketmaster.com/search?q="
+      let ticketLink="<a href='" + ticketURL + data.data[i].name + "'>" + myTicket + "</a>";
+
       $(artist).text(' ' + data.data[i].name + ' ');
+      $(ticketLink).text = ticket_link;
 //       // get venue name
       let venue = $('.venue-'+i);
       $(venue).text(data.data[i].location.name);
@@ -76,6 +81,7 @@ function getShows(artistName) { //when function called, will be passed the artis
 //       //grab country
       let country = $(".country-"+i);
       $(country).text(data.data[i].location.address.addressCountry);
+    
       let banner = $('.banner-'+i);
       $(banner).text('Wanna see '+ data.data[i].name + ' play live in '+ data.data[i].location.address.addressLocality + '??');
       
